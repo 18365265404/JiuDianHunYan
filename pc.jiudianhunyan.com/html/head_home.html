@@ -1,0 +1,48 @@
+<!--首页的头部-->
+<div class="head-home layout">
+	<div class="head-home-left" style="width: 350px">
+		<img src="../img/logo.png"/><a class="headCityV" href="cities.html">全国<span>∨</span></a>
+	</div>	
+	<div class="head-home-center"  style="width: 750px;">
+		<!--<a href="index.html" id="home-active" style=" margin-left: 10px;">首页</a>-->
+		
+		<a href="hotel.html">婚宴酒店</a>
+		<a href="caseMore.html">策划案例</a>
+		<a style="" href="classroom.html">婚礼课堂</a>
+		<a style="border: none;" href="#" class="head-home-nav">关于我们<span class="triangle">▲</span><span class="triangle">▼</span>
+			<ul style="top: -20px; padding-top: 30px;">
+				<li onclick="(window.location.href='contactUs.html')">联系我们</li>
+				<li onclick="(window.location.href='aboutUs.html')">公司简介</li>
+			</ul>
+		</a>
+		
+		<!--<a style="display: none;" href="#">婚品采购</a>-->
+		
+	</div>	
+	<div class="head-seach" style="width: 500px; ">
+		<div class="head-home-right" style="width: 300px;">
+			<input class="serachV1" type="" name="" id="" value=""  style="width: 270px;"/>
+		</div>
+		<div class="head-home-seach-btn" onclick="goSearch()">
+			<img src="../img/icon_seach.png"/>
+		</div>
+	</div>
+	
+</div>
+<script src="../allJs/packageJs/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	let localCityV=localStorage.getItem("city_name")
+	if(localCityV){
+		$(".headCityV").html(localCityV)
+	}else{
+		$(".headCityV").html('全国')
+	}
+	
+	
+	function goSearch(){
+
+	window.location.href=encodeURI('searchHotel.html?id='+$(".serachV1").val());
+	
+}
+
+</script>

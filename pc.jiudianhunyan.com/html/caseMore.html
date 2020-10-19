@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>聚宴家</title>
+		<link rel="stylesheet" type="text/css" href="../css/styleAll.css"/>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+	</head>
+	<script src="../js/require.js" type="text/javascript" charset="utf-8"></script>	
+	<body>
+		<div class="nav2" style=""></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".nav2").load("nav2.html")
+			})
+		</script>
+<!--头部-->		
+		<div class="home-search layout">
+			<img src="../img/logo.png"/>
+			<div class="head_fixed_right home-search-center">
+				<div class="head_fixed_seach ">
+					<div class="head_fixed_seach_right home-search-center-right">
+						<input class="serachV" type="" name="" id="" value="" />
+					</div>
+					<div class="head_fixed_seach_btn  home-search-center-btn" onclick="goSearch()">
+						搜索
+					</div>
+				</div>
+			</div>
+			<div class="home-search-tel">
+				<h1>聚宴家客服热线</h1>
+				<h2>400-855-1520</h2>
+			</div>
+		</div>
+		
+		<!--分页内容区域-->
+		<div class="more layout">
+			<div class="">
+				<ul class="more-list-Case">
+					
+				
+				</ul>
+			
+				<div style="width: 100%; display: flex; justify-content: flex-end; margin-top: 50px; margin-bottom: 100px;">
+					<div id="biuuu_city" style="">
+						
+					</div>
+			
+				</div>
+			</div>
+			
+			
+			
+
+			
+		</div>		
+		
+		
+		<script type="text/javascript">
+			$(".hotel-kind-title1 p").click(function(){
+				$(".hotel-kind-title1 p").removeClass("hotel-title-active")
+				$(this).addClass("hotel-title-active")
+//				$(this).css({"color":"red","border":"1px solid #cccccc","border-bottom":"none","border-top":"2px solid red"})
+			})
+			
+			$(".hotel-kind-right li").mouseenter(function(){
+//				$(".hotel-kind-right li").find(".hotel-hot").removeClass("hotel-hot-gone")
+//				$(this).find("ul").addClass("hotel-hot-gone")
+				$(".hotel-kind-right li").find(".hotel-hot").css({"display":"none"})
+				$(this).find(".hotel-hot").css({"display":"block"})
+//				alert()
+			}).mousemove(function (){  
+            	$(this).find(".hotel-hot").css({"display":"block"})
+        });  
+		</script>
+		
+		
+		<!--————————————————底部footer——————————————————————-->
+		<div class="foot"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".foot").load("foot.html")
+			})
+		</script>
+		
+		<!--————————————————有测悬浮导航——————————————————————-->
+		<div class="go-top"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".go-top").load("backTop.html")
+			})
+		</script>
+	</body>
+</html>
+<script src="../allJs/laypage/laypage.js"></script>
+<script src="../js/caseMore.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+
+
+
+</script>
+

@@ -1,0 +1,1652 @@
+.dCase-head{
+	height: 68px;
+	display: flex;
+	justify-content: space-between;
+}
+.dCase-head-left{
+	height: 68px;
+	width: 196px;
+	display: flex;
+	justify-content: space-between;
+}
+.dCase-head-left>img{
+	width: 130px;
+	height: 44px;
+	margin-top: 16px;
+}
+.dCase-head-left>h1{
+	color: #666666;
+	font-size: 12px;
+	margin: 0;
+	line-height: 68px;
+}
+.dCase-head-center{
+	height: 68px;
+	width: 556px;
+
+}
+
+.dCase-head-center{
+	display: flex;
+	height: 40px;
+	margin-top: 20px;
+	justify-content: space-between;
+	border-radius: 4px;
+	border:1px solid red;
+	overflow: hidden;
+}
+.dCase-head-center>input{
+	margin: 8px 15px;
+	color: #333333;
+	flex: 1;
+}
+.dCase-head-center>h1{
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #F83244;
+	color: white;
+	letter-spacing: 2px;
+	font-size: 18px;
+	margin: 0;
+}
+.dCase-head-right{
+	height: 68px;
+	width: 380px;
+	display: flex;
+	justify-content: space-between;
+
+}
+.dCase-head-right>a{
+	line-height: 68px;
+	color: #333333;	
+}
+.dCase-head-right>a:first-child{
+	margin-left: 30px;
+}
+.dCase-head-right>a:last-child:hover span{
+
+	color: #333333;
+}
+/*婚礼策划详情类容*/
+.dCase-title{
+	font-size: 12px;
+	color: #666666;
+	display: flex;
+	height: 52px;
+	line-height: 52px;
+	margin: 0;
+}
+.dCase-title>span{
+	margin: 0 2px;
+}
+.dCase-title>span:last-child{
+
+}
+.dCase-title>a{
+	color: #999999;
+}
+/*婚礼策划*/
+.dCase-content{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 90px;
+}
+.dCase-banner{
+	width: 840px;
+	background: white;
+	box-shadow:0px 8px 28px rgba(0, 0, 0, 0.06);; /*边框阴影*/
+}
+.swiper-container4{
+	width: 840px;
+	height: 525px;
+}
+.next-btn-left{
+	background: url(../img/icon_right.png) center center no-repeat!important;
+	background-position: 0px center !important;
+	background-size:90%!important ;
+	margin-right: -18px;
+	width: 50px!important;
+	height: 64px!important;
+
+	border-radius: 32px 0 0 32px;
+	line-height: 64px;
+	color: white;
+	text-align: center;
+	font-size: 50px;
+
+
+}
+.next-btn-right{
+	background: url(../img/icon_left.png) center center no-repeat!important;
+	background-position: 0px center !important;
+	background-size:90%!important ;
+	margin-left: -18px;
+	width: 50px!important;
+	height: 64px!important;
+	opacity: 1;
+	border-radius:  0 32px 32px 0;
+	line-height: 64px;
+	color: white;
+	text-align: center;
+	font-size: 50px;
+	z-index: 1000000;
+
+
+}
+.pagination-num{
+
+	width: 83px!important;
+	height: 48px!important;
+	margin-left: 735px;
+	margin-bottom: 450px;
+	line-height: 48px;
+	border-radius: 24px;
+	color: white;
+	background:rgba(0, 0, 0, 0.7);
+
+}
+.dCase-banner-des{
+	padding: 30px 40px;
+	width: 840px;
+	height: 181px;
+	
+}
+.dCase-banner-one{
+	background: red;
+}
+.dCase-banner-des1{
+	font-size: 24px;
+	line-height: 35px;
+	margin: 0;
+	
+	
+	display: flex;
+	justify-content: space-between;
+}
+.dCase-banner-des1>h1{
+	font-size: 24px;
+	color: black;
+	font-weight: 500;
+	margin: 0;
+}
+.dCase-banner-des1>h2{
+	margin: 0;
+	width: 120px;
+	display: flex;
+	line-height: 35px;
+	font-size: 12px;
+	color: #666666;
+	justify-content: space-between;
+	
+}
+.dCase-banner-des2{
+	margin: 0;
+	margin-top: 10px;
+	color: #666666;
+	font-size: 12px;
+	
+}
+.dCase-banner-des3{
+	margin-top: 20px;
+	color: #333333;
+	font-size: 14px;
+	
+}
+/*商家案例*/
+.dCase-headline{/*标题*/
+	line-height: 75px;
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+	color: black;
+}
+
+.dCase-headline2{/*标题*/
+	margin-top: 0px;
+}
+.dCase-case{
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.dCase-case>li{
+	box-sizing: border-box;
+	overflow: hidden;
+	width: 285px;
+	height: 246px;
+	margin-bottom: 20px;
+    margin-right: 20px;
+    border: 1px solid #cccccc;
+}
+.dCase-case>li:nth-child(4n){
+
+    margin-right: 0px;	
+}
+.dCase-case>li>img{
+	height: 162px;
+	width: 285px;
+	display: block;
+}
+.dCase-case>li>p{
+	text-overflow:ellipsis;
+   	white-space:nowrap;
+	overflow:hidden;	/*超出...*/
+	padding: 0 16px;
+	margin-top: 14px;
+   	
+   	font-size: 12px;
+   	color: black;
+}
+.dCase-case>li>h2{
+	margin: 0;
+	padding: 0 16px;	
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+   	color: #666666;
+}
+/*右侧*/
+.dCase-right{
+	width: 320px;
+	margin-top: 50px;
+}
+.dCase-right1{
+	position: relative;
+	padding: 0 40px;
+	box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.12);
+	padding-top: 30px;
+	margin-bottom: 15px;
+}
+.dCase-right1>img{
+	width: 100px;
+	height: 100px;
+	display: block;
+	border-radius: 50%;
+	margin: 0px auto;
+	
+}
+.dCase-right1>p{
+	line-height: 65px;
+	text-align: center;
+	color: #333333;
+	font-size: 16px;
+}
+.dCase-btn{
+	display: flex;
+	
+	color: red;
+}
+.dCase-btn>a{
+	display: block;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	width: 115px;
+	border-radius: 20px;
+	font-size: 14px;
+	border: 1px solid #F95161;
+	margin: 0 auto;
+	color: red;
+}
+.dCase-btn>a:hover{
+	
+}
+.dCase-btn>a:nth-child(1){
+	color: red;
+}
+.dCase-btn>a:nth-child(2){
+	background: #F95161;
+	color: white;
+}
+.dCase-dotted{
+	width: 100%;
+	height: 1px;
+	border-top: 1px dotted #cccccc;
+}
+.dCase-comment{
+	display: flex;
+	justify-content: space-between;
+	line-height: 60px;
+}
+.dCase-star{
+	margin-top: 5px;
+	display: flex;
+	padding: 8px 0;
+	
+	
+}
+.dCase-star>span{
+	color: #FFA800;
+	font-size: 12px;
+	margin-right: 2px;
+}
+.dCase-star>span:last-child{
+	color: #666666;
+	margin-left: 5px;
+}
+.dCase-comment>h5{
+	margin-top: 13px;
+	color: #666666;
+	font-size: 12px;
+}
+.dCase-right1>.img-crown{
+	height: 34px;
+	width: 31px;
+	position: absolute;
+	border-radius:0;
+	right: 20px;
+	top: 0;
+}
+/*右侧热卖套餐*/
+.dCase-combo{
+	width: 320px;
+}
+.dCase-combo>li{
+	position: relative;
+	height: 258px;
+	margin-bottom: 20px;
+
+}
+.dCase-combo>li>img{
+	width: 320px;
+	height: 178px;
+	
+}
+
+.dCase-combo>li>.dCase-combo-des:hover{
+	top: 170px;
+}
+.dCase-combo-des{
+	position: absolute;
+	transition:all .15s ;
+	left: 15px;
+	top: 175px;
+	width: 292px;
+	height: 103px;
+	padding: 16px 20px 14px;
+	box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.06);
+	background: white;
+	margin: 0 auto;
+	margin-top: -20px;
+}	
+.dCase-combo-des>p{
+	color: black;
+	font-size: 14px;
+
+}
+.dCase-combo-des>h1{
+	margin: 0;
+	color: #666666;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.dCase-combo-des-price{
+	display: flex;
+	justify-content: space-between;
+
+}
+.dCase-combo-des-price>h2{
+	margin: 0;
+	color: red;
+}
+.dCase-combo-des-price>h2>span:nth-child(1){
+	font-size: 14px;
+	margin-right: -10px;
+}
+.dCase-combo-des-price>h2>span:nth-child(2){
+	font-size: 18px;
+	margin-right: 5px;
+}
+
+.dCase-combo-des-price>h3{
+	margin: 0;
+	margin-top: 15px;
+	font-size: 12px;
+	color: #666666;
+}
+
+
+
+
+
+/************************************所有城市*********************************************/
+.city-seach{
+	width: 310px;
+	height: 30px;
+	display: flex;
+	margin-top: 40px;
+	position: relative;
+}
+.city-seach-left{
+	border: 1px solid #CCCCCC;
+	border-right: none;
+	flex: 1;
+}
+.city-seach-left>input{
+	width: 100%;
+	margin-left: 10px;
+	height: 25px;
+	margin-top: 2px;
+}
+.city-seach-right{
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	color: white;
+	background: #FF5165;
+	line-height: 30px;
+	font-size: 14px;
+
+}
+.city-seach-list{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 30px;
+	width: 230px;
+	border: 1px solid #cccccc;
+	border-top: none;
+	background: white;
+}
+.city-seach-list>li{
+	color: #666666;
+	height: 30px;
+	padding: 5px;
+	
+}
+.city-seach-list>li:hover{
+	background: #FF5165;
+	color: white;
+}
+.city-country {
+	height: 80px;
+	line-height: 80px;
+	border-bottom: 1px dotted #CCCCCC;
+}
+.city-hot{
+	border-bottom: 1px dotted #cccccc;
+	display: flex;
+	flex-wrap: wrap;
+}
+.city-hot>span{
+	line-height: 76px;
+	color: #999999;
+	margin-right: 10px;
+}
+.city-hot>a{
+	line-height: 76px;
+	
+	margin: 0 10px;
+	color: #FF5165;
+}
+.city-letter{
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	background: #fafafa;
+	border: 1px solid #cccccc;
+	margin-top: 30px;
+}
+.city-letter>span{
+	width: 140px;
+	line-height: 40px;
+	margin-left: 15px;
+	
+	color: #999999;
+	font-size: 14px;
+}
+.city-letter-list{
+	display: flex;
+}
+.city-letter-list>a{
+	text-align: center;
+	font-size: 14px;
+	line-height: 34px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	width: 36px;
+	height: 34px;
+	color: #666666;
+}
+.city-letter-list>a:hover{
+	background: #FF5165;
+	color: white;
+}
+.city-list{
+	margin-bottom: 80px;
+}
+.city-list-item{
+	display: flex;
+	
+	margin-top: 20px;
+}
+.city-list-item>span{
+	width: 42px;
+	height: 42px;
+	display: block;
+	margin-right: 20px;
+	border:1px solid #CCCCCC;
+	line-height: 42px;
+	text-align: center;
+	background: #fafafa;
+}
+.city-list-item-right{
+	display: flex;
+	flex-wrap: wrap;
+}
+.city-list-item-right>a{
+
+	height: 42px;
+	line-height: 42px;
+	margin-left: 20px;
+
+}
+.dialog{
+	display: none; 
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+.dialog-content{
+	width: 480px;
+	height: 375px;
+	background: white;
+	padding: 20px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0; 
+	margin: auto; 
+	
+}
+.pop-close-content{
+	height: 12px;
+}
+.pop-close{
+	float: right;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+	margin-top: -10px;
+
+}
+.dCase-phone{
+	display: flex;
+	
+	margin-top: 10px;
+
+	height: 40px;
+}
+.dCase-phone>img{
+	margin-left: 95px;
+	
+}
+.dCase-phone>p{
+
+	color: #333333;
+	font-size: 30px;
+	font-weight: 700;
+	margin-left: 15px;
+	
+}
+.pop-line{
+	height: 40px;
+	width: 406px;
+	border-bottom: 1px dotted #cccccc;
+	margin: 0 auto;
+}
+.dialog-content>h1{
+	
+	color: #666666;
+	font-size: 14px;
+	text-align: center;
+	margin: 0;
+	margin-top: 30px;
+	line-height: 24px;
+}
+.dialog-content>h2{
+	margin-top: 30px;
+	color: #666666;
+	font-size: 14px;
+	text-align: center;
+	margin: 0;
+	line-height: 24px;
+}
+.dialog-content>img{
+	display: block;
+	height: 124px;
+	width: 124px;
+	
+	margin: 20px auto;
+	
+	 
+}
+
+/*热门酒店详情*/
+.hotHotel-content{
+	display: flex;
+	justify-content: space-between;
+}
+/*热门酒店详情----轮播图*/
+.hotHotel-content1{
+	width: 481px;
+}
+.hotHotel-showImg-content>img{
+	width: 481px;
+	height: 360px;
+}
+.hotHotel-content1-list{
+	display: flex;
+
+	margin-top: 2px;
+}
+
+.hotHotel-content1-list>img{
+	width: 93px;
+	height: 93px;
+	margin-right: 4px;
+}
+.hotHotel-content1-list>img:last-child{
+	margin-right: 0;
+}
+/*热门酒店详情----描述*/
+.hotHotel-content2{
+	width: 410px;
+}
+.hotHotel-content2>h1{
+	margin: 0;
+	font-size: 24px;
+	color: #000000;
+	font-weight: 650;
+	line-height: 30px;
+}
+.hotHotel-content2>h2{
+	margin: 0;
+	font-size: 24px;
+	color: #F83244;
+	display: flex;
+	height: 40px;
+	align-items:flex-end ;
+}
+.hotHotel-content2>h2>span:nth-child(1){
+	font-size: 24px;
+	line-height: 18px;
+}
+.hotHotel-content2>h2>span:nth-child(2){
+	font-size: 40px;
+	line-height: 24px;
+	
+}
+.hotHotel-content2>h2>span:nth-child(3){
+	font-size: 12px;
+	color: #999999;
+	margin-left: 11px;
+}
+.hotHotel-content2>p{
+	line-height: 56px;
+	color: #666666;
+	font-size: 14px;
+	margin: 0;
+}
+.hotHotel-btn{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+	width: 260px;
+}
+.hotHotel-btn1{
+	width: 115px;
+	height: 40px;
+	text-align: center;
+	color: #F83244;
+	font-size: 14px;
+	background: white;
+	border-radius: 20px;
+	line-height: 40px;
+	border: 1px solid #F83244;
+}
+
+.hotHotel-btn2{
+	width: 115px;
+	height: 40px;
+	text-align: center;
+	color: white;
+	font-size: 14px;
+	background: #F83244;
+	border-radius: 20px;
+	line-height: 40px;
+}
+.hotHotel-gift{
+	height: 40px;
+	display: flex;
+	
+}
+.hotHotel-gift>p:nth-child(1){
+	font-size: 12px;
+	color: #F83244;
+	width: 60px;
+	border-radius: 2px;
+	height: 20px;
+	margin-top: 10px;
+	text-align: center;
+	background: #FFF1F6;
+	line-height: 20px;
+}
+.hotHotel-gift>p:nth-child(2){
+	margin-left: 12px;
+}
+.hotHotel-gift>p:nth-child(2)>span{
+	display: block;
+}
+.hotHotel-gift2>p:nth-child(2)>span{
+	line-height: 40px;
+}
+.hotHotel-content3{
+	width: 240px;
+	height: 336px;
+}
+/*热门酒店详情----描述1*/
+.hotHotel-detail1{
+	margin-bottom: 40px;
+}
+.hotHotel-detail-nav{
+	height: 52px;
+	width: 100%;
+	background: #FAFAFA;
+	display: flex;
+	margin-top: 40px;
+}
+.hotHotel-detail-nav>a{
+	width: 140px;
+	height: 52px;
+	text-align: center;
+	line-height: 52px;
+	color: #333333;
+}
+.hotHotel-detail-nav .hotHotel-detail-nav-active{
+	color: #F83244;
+	background: white;
+}
+.hotHotel-detail-nav>a:hover{
+	color: #F83244;
+	background: white;
+}
+.hotHotel-detail-title{
+	display: flex;
+	height: 70px;
+	line-height: 70px;
+	margin: 0 40px;
+	border-bottom: 1px dotted #cccccc;
+}
+.hotHotel-detail-title>img{
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+	margin-top: 25px;
+	
+}
+.hotHotel-detail-title>p{
+
+	font-weight: 650;
+	font-size: 20px;
+	color: #000000;
+}
+.hotHotel-des>h1{
+	margin: 0;
+	font-size: 16px;
+	color: #333333;
+	line-height: 50px;
+	font-weight: 600;
+	margin: 0 40px;
+	margin-top: 15px;
+}
+.hotHotel-des>h2{
+	margin: 0;
+	font-size: 14px;
+	color: #666666;
+	line-height: 22px;
+	display: flex;
+	margin: 6px 40px;
+}
+.hotHotel-des>h2>span{
+
+
+}
+.hotHotel-des>h2>span:nth-child(1){
+	width: 95px;
+}
+.hotHotel-des>h2>span:nth-child(2){
+	width: 950px;	
+	color: #333333;
+}
+/*热门酒店详情----描述1*/
+.hotHotel-detail2-des{
+	margin-top: 20px;
+	padding: 0 40px;
+}
+.hotHotel-detail2-des{
+	margin-bottom:50px ;
+}
+.hotHotel-detail2>img{
+	width: 880px;
+	padding: 0 40px;
+}
+/*悬浮标题*/
+#hotHotel-position-nav{
+	position: fixed;
+	width:1200px;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: auto;
+	z-index: 1000000;
+	box-shadow:0px 8px 28px rgba(0, 0, 0, 0.06); /*边框阴影*/
+}
+/*最新套餐*/
+
+.hotHotel-new{
+	padding-top: 80px;
+}
+.hotHotel-title{
+	font-size: 24px;
+	color: black;
+	margin-bottom: 20px;
+}
+.hotHotel-new-list{
+	display: flex;	
+	flex-wrap: wrap;
+	
+}
+.hotHotel-new-list>li:nth-child(5n){
+	margin-right: 0px;
+	
+}
+.hotHotel-new-list>li{
+	position: relative;
+	width: 224px;
+	height: 226px;
+	margin-right: 20px;
+	margin-bottom: 40px;
+}
+.hotHotel-new-list>li:hover .hotHotel-new-des{
+	top: 115px;
+	
+}
+.hotHotel-new-list>li>img{
+	display: flex;
+	height: 140px;
+	width:224px ;
+}
+.hotHotel-new-des{
+	transition:all .15s ;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 120px;
+	background: white;
+	width: 196px;
+	height: 103px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0 18px;
+	box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.06);
+}
+.hotHotel-new-des>h1{
+	margin: 0;
+	font-size: 14px;
+	color: #000000;
+	padding-top: 18px;
+	overflow:hidden;	/*超出...*/
+   	text-overflow:ellipsis;
+   	white-space:nowrap;
+	
+}
+
+.hotHotel-new-des>h2{
+	font-size: 12px;
+	color: #666666;
+	margin: 0;
+	line-height: 35px;
+	
+}
+.hotHotel-new-des>h3{
+	margin: 0;
+	display: flex;
+	color: #F83244;
+}
+.hotHotel-new-des>h3>span:nth-child(1){
+	font-size: 14px;
+	
+}
+.hotHotel-new-des>h3>span:nth-child(2){
+	font-size: 18px;
+	line-height: 12px;
+	display: inline-block;
+	width:80px ;
+}
+.hotHotel-new-des>h3>span:nth-child(3){
+	margin-left: ;
+	font-size: 12px;
+	color: #666666;
+	margin-left: 40px;
+	
+}
+/*同类套餐商家推荐*/
+.hotHotel-same{
+	margin-bottom: 108px;
+}
+.hotHotel-same-list{
+	display: flex;
+	flex-wrap: wrap;	
+	
+}
+.hotHotel-same-list>li{
+	width: 224px;
+	margin-right: 20px;
+	box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.06);
+}
+.hotHotel-same-list>li:nth-child(5n){
+	margin-right: 0;
+}
+.hotHotel-same-list>li>img{
+	width: 224px;
+	height: 224px;
+}
+.hotHotel-same-des{
+	padding: 12px 20px;
+}
+.hotHotel-same-des>h1{
+	margin: 0;
+	font-size: 14px;
+	color: black;
+	overflow:hidden;	/*超出...*/
+   	text-overflow:ellipsis;
+   	white-space:nowrap;
+	
+}
+.hotHotel-same-des>h2{
+	margin: 15px 0;
+	margin-bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	color: #666666;
+	font-size: 12px;
+}
+
+
+
+/***********************酒店详情*************************************/
+.hotHotel-content2-des>h2{
+	color: #F83244;
+	margin-top: 20px;
+	display: flex;
+}
+.hotHotel-content2-des>h2>i{
+	font-size: 18px;
+	font-style: normal;
+}
+.hotHotel-content2-des>h2>span{
+	font-size: 30px;
+	line-height: 15px;
+}
+.hotHotel-content2-des>h3{
+	
+	display: flex;
+	font-size: 14px;
+	color: #333333;
+
+}
+.hotHotel-content2-des>h3>i{
+	font-style: normal;
+	display: flex;
+	font-size: 14px;
+	color: #999999;
+	margin-right: 5px;
+}
+.hotHotel-content2-des>h3>span{
+	margin: 0 5px;
+}
+.hotHotel-content2-des>h4{
+	margin-top: 20px;
+	display: flex;
+	font-size: 14px;
+	color: #333333;
+}
+.hotHotel-content2-des>h4>i{
+	font-style: normal;
+	color: #FE7E33;
+}
+.hotHotel-content2-des>h4>em{
+	margin: 0 6px;
+	font-style: normal;
+	color: #999999;
+}
+.hotHotel-content2-des>h4>span{
+	margin-left: 5px;
+
+}
+
+.hotHotel-content2-des>h5{
+	margin-top: 20px;
+	display: flex;
+	width: 150px;
+	height: 50px;
+	font-size: 18px;
+	line-height: 50px;
+	margin-bottom: 25px;
+	color: white;
+	background: #F83244;
+	border-radius: 5px;
+}
+.hotHotel-content2-des>h5>span{
+	margin: 0 auto;
+}
+.hotHotel-content2-des>h6{
+	display: flex;
+}
+.hotHotel-content2-des>h6>i{
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	margin-right: 10px;
+	color: white;
+	background: #FF70CF;
+	border-radius: 2px;
+	line-height: 18px;
+	font-style: normal;
+}
+.hotHotel-content2-des>h6>span{
+	color: #666666;
+	line-height: 18px;
+	text-align: center;
+	margin-right: 10px;
+}
+.hotHotel-content2-des>h1{
+	color: #666666;
+	font-size: 14px;
+}
+/*********************************************婚宴酒店详情**********************/
+.hotelDetail{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 50px;
+}
+.hotelDetail-left{
+	margin-top: 40px;
+	width: 958px;
+	border: 1px solid #cccccc;
+}
+.hotelDetail-left-title{
+	display: flex;
+	height: 40px;
+	background: #FAFAFA;
+	margin-bottom: 35px;
+	border-bottom: 1px solid #cccccc;
+}
+.hotelDetail-left-title>a{
+	width: 136px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #666666;
+	
+}
+.hotelDetail-left-title>.hotelDetail-title-active{
+	border: 1px solid #cccccc;
+	border-bottom:none ;
+	height: 42px;
+	margin-top: -2px;
+	border-top:2px solid #F83244 ;
+	
+	color: #F83244;
+	background: white;
+}
+
+.hotelDetail-left-title>.hotelDetail-title-one{
+	border-left: 1px solid white;
+}
+.hotelDetail-left-name{
+	display: flex;
+	line-height: 35px;
+	border-bottom: 1px dotted #cccccc;
+	width: 848px;
+	margin: 0 auto;
+}
+.hotelDetail-left-name>img{
+	width: 18px;
+	height: 18px;
+	margin-right: 6px;
+	margin-top: 5px;
+}
+.hotelDetail-left-name>span{
+	font-size: 18px;
+	color: #333333;
+	margin-right: 5px;
+}
+.hotelDetail-left-name>i{
+	font-style: normal;
+	font-size: 14px;
+	color: #333333;
+	margin-left: 5px;
+	
+}
+/*酒店详情列表*/
+.hotelDetail-list{
+	width: 848px;
+	margin: 0 auto;
+	margin-top: 25px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.hotelDetail-list>li{
+	width:423px;
+	display: flex;
+	margin-bottom: 30px;
+}
+.hotelDetail-list>li>img{
+	width: 270px;
+	height: 180px;
+}
+.hotelDetail-list-des{
+	height: 180px;
+	padding-left: 10px;
+}
+.hotelDetail-list-des>h1{
+	font-size: 16px;
+	color: #333333;
+	margin: 0;
+	line-height: 30px;
+	margin-bottom: 5px;
+}
+.hotelDetail-list-des>h2{
+	font-size: 12px;
+	color: #666666;
+	line-height: 28px;
+	margin: 0;
+}
+.hotelDetail-list-des>h2:nth-child(1) span{
+	margin-right: 5px;
+}
+/*菜单*/
+.hotelDetail-menu{
+	width: 848px;
+	height: 300px;
+	background: url(../img/menu.png) center center no-repeat;
+	background-size: 100%;
+	margin: 0 auto;
+	display: flex;
+	margin-bottom: -20px;
+}
+.hotelDetail-menu:last-child{
+	margin-bottom: 0;
+}
+.hotelDetail-menu-left{
+	width: 195px;
+}
+.hotelDetail-menu-left>p{
+	font-size: 14px;
+	color: #333333;
+	margin-top: 45px;
+	margin-left: 40px;
+}
+.hotelDetail-menu-squer{
+	width: 112px;
+	height: 112px;
+	text-align: center;
+	line-height: 112px;
+	color: white;
+	display: flex;
+	margin-top: 30px;
+	background: #F83244;
+	border-radius: 50%;
+	margin-left: 40px;
+}
+.hotelDetail-menu-text{
+	display: flex;
+	text-align: center;
+	margin: 0 auto;
+}
+.hotelDetail-menu-text>span{
+	font-size: 14px;
+}
+.hotelDetail-menu-text>span:nth-child(1){
+
+}
+.hotelDetail-menu-text>i{
+	font-size: 24px;
+	line-height: 110px;
+	font-style: normal;
+}
+/*套餐右边*/
+.hotelDetail-menu-right>p{
+	/*width: 28px;*/
+	height: 28px;
+	color: #F83244;
+	/*border-bottom: 2px solid #F83244;*/
+	margin-top: 45px;
+}
+.hotelDetail-menu-detail{
+	width: 550px;
+	height: 122px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.hotelDetail-menu-detail>span{
+	/*width: 105px;*/
+	color: #666666;
+	font-size: 14px;
+	margin-right: 25px;
+	margin-bottom: 5px;
+}
+.hotelDetail-menu-right>h1{
+	font-size: 12px;
+	color: #999999;
+	margin-top: 50px;
+}
+.hotelDetail-intro{
+	margin-top: 30px;
+}
+/*酒店介绍*/
+.hotelDetail-intro-msg{
+	display: flex;
+	justify-content: space-between;
+	width: 848px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-bottom: 30px;
+}
+.hotelDetail-intro-table{
+	border: 1px solid #CCCCCC;
+	width: 334px;
+	height: 132px;
+	margin-top: 10px;
+	color: #666666;
+}
+.hotelDetail-intro-msg{
+	width: 848px;
+
+}
+.hotelDetail-intro-msg>p{
+	color: #666666;
+	font-size: 14px;
+	line-height: 28px;
+	width: 848px;
+
+
+}
+.hotelDetail-td>span{
+	line-height: 30px;
+	font-size: 12px;
+}
+.hotelDetail-td>span:nth-child(1){
+	margin-left: 10px;
+}
+.hotelDetail-td>span:nth-child(2){
+	margin-left: 25px;
+}
+.hotelDetail-right{
+	margin-top: 15px;
+}
+
+/*婚宴酒店详情弹窗*/
+.dialog-content-banner{
+	width: 920px;
+	background: white;
+	margin:auto;
+	height:790px ;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	
+}
+.dialog-banner-box{
+	width: 800px;
+	height: 450px;
+	position: relative;
+	margin: 40px auto;
+	margin-bottom: 20px;
+}
+.dialog-banner-show>img{
+	width: 800px;
+	height: 450px;
+}
+.banner-left{
+	width: 40px;
+	height: 74px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: url(../img/icon_position.png) no-repeat;
+	background-position: 0px -74px;
+}
+.banner-left:hover{
+	background-position: 0px 0px;
+}
+.banner-right{
+	width: 40px;
+	height: 74px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: url(../img/icon_position.png) no-repeat;
+	background-position: -40px -74px;
+}
+.banner-right:hover{
+	background-position: -40px 0px;
+}
+.dialog-banner-list{
+	display: flex;
+	margin-top: 0px;
+	width: 800px;
+	margin: 0 auto;
+}
+.dialog-banner-list>img{
+	width: 68px;
+	height: 68px;
+	margin-right: 18px;
+}
+.dialog-banner-active{
+	border: 1px solid #F83244;
+}
+
+/*弹窗描述*/
+.dialog-banner-des{
+	width: 800px;
+	margin: 0 auto;
+}
+.dialog-banner-des>h1{
+	display: flex;
+	margin-top: 30px;
+	color: #333333;
+	font-size: 16px;
+}
+.dialog-banner-des>h2{
+	display: flex;
+	margin-top: 15px;
+	color: #333333;
+	font-size: 12px;
+	flex-wrap: wrap;
+
+}
+.dialog-banner-des>h2>span{
+	margin-right: 10px;
+
+}
+.dialog-banner-des>h2>i{
+	margin-right: 30px;
+	font-style: normal;
+}
+
+
+/****************************搜索页面*******************************************/
+.search-title{
+	line-height: 85px;
+	font-size: 24px;
+	color: #000000;
+}
+.search-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	
+}
+.search-list>li:hover img{
+	opacity: 0.8;
+}
+.search-list>li{
+	margin-right: 20px;
+	width: 285px;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.search-list>li:nth-child(4n){
+	margin-right: 0;
+}
+.search-list>li>img{
+	width: 285px;
+	height: 162px;
+	display: block;
+}
+.search-list>li>p{
+	margin: 0 12px;
+	font-size: 14px;
+	color: #000000;
+	margin-top: 16px;
+}
+.search-list>li>h1{
+	margin: 0 15px;
+	font-size: 12px;
+	color: #666666;
+	margin-top: 14px;
+	
+}
+.search-list>li>h3{
+	margin: 0 15px;
+	font-size: 14px;
+	color: #000000;
+	margin-top: 14px;
+	display: flex;
+	justify-content: space-between;
+}
+.search-list>li>h3>span:nth-child(1){
+	color: #666666;
+	font-size: 12px;
+	width: 98px;
+	line-height: 28px;
+	margin-bottom: 15px;
+	
+	
+}
+.search-list>li>h3>span:nth-child(2){
+	color: #F83244;
+	font-size: 14px;
+	margin-left: 3px;
+	line-height: 30px;
+	
+	margin-left: 0px;
+}
+.search-list>li>h3>span:nth-child(3){
+	color: #F83244;
+	font-size: 18px;
+	line-height: 28px;
+
+}
+
+/********************************hotle More********************************************************/
+.more{
+	display: flex;
+	justify-content: space-between;
+}
+.more-list{
+	width: 965px;
+	margin-top: 30px;
+}
+.more-list>li{
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+	border-bottom: 1px solid #CCCCCC;
+}
+.more-list>li:last-child{
+	border: none;
+}
+.more i{
+	font-style: normal;
+}
+.more em{
+	font-style: normal;
+}
+.more-list>li>img{
+	width: 188px;
+	height: 188px;
+}
+.more-content1{
+	width: 380px;
+}
+.more-content1>h1{
+	margin: 0;
+	line-height: 44px;
+	color: #000000;
+	font-size: 18px;
+}
+.more-content1>h2{
+	margin: 0;
+	line-height: 30px;
+	color: #999999;
+	font-size: 14px;
+}
+.more-content1>h2>em{
+	color: #999999;
+	margin: 0 10px;
+}
+.more-content1>h2>span{
+	color: #999999;
+	margin-left: 0px;
+}
+.more-content1>h2>i{
+	color: #333333;
+}
+.more-content1>h3{
+	margin: 0;
+	line-height: 30px;
+	color: #333333;
+	font-size: 14px;
+}
+.more-content1>h3>span{
+	color: #FE7E33;
+	margin-right: 3px;
+}
+.more-content1>h3>em{
+	color: #999999;
+	margin: 5px;
+}
+.more-content1>h4{
+	color: #666666;
+	font-size: 14px;
+	margin-top: 60px;
+}
+.more-content2{
+	width: 345px;
+}
+
+.more-content2-top{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+	
+}
+.more-des{
+	border-right: 1px solid#cccccc;
+	padding: 0 15px;
+	
+	line-height: 20px;
+	height: 36px;
+}
+.more-des:nth-child(2){
+	max-width: 160px;
+}
+.more-des:nth-child(3){
+	border: none;
+	margin-right: -15px;
+}
+.more-des>h1{
+	font-size: 16px;
+	color: #FE7E33;
+	margin-top: -6px;
+	
+}
+.more-des>h1>span{
+	font-size: 14px;
+}
+.more-des>h2{
+	margin: -5px;
+	font-size: 12px;
+	color: #666666;
+}
+.more-content2-bottom{
+	margin-top: 50px;
+	
+}
+.more-content2-bottom>h1{
+	display: flex;
+	justify-content: flex-end;
+	color: #F83244;
+	font-size: 24px;
+	margin: 0;
+	width: ;
+}
+.more-content2-bottom>h1>i{
+	font-size: 12px;
+	line-height: 30px;
+	
+}
+.more-content2-bottom>h2{
+	float: right;
+	width: 100px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	color:white;
+	background: #F83244;
+	font-size: 14px;
+	border-radius: 3px;
+	margin-top: 10px;
+	
+}
+
+/***********************CaseMore********************************/
+.more-list-Case{
+	width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.more-list-Case>li{
+	width: 285px;
+	margin-right: 20px;
+	overflow: hidden;
+	border: 1px solid #cccccc;
+	margin-bottom: 20px;
+}
+.more-list-Case>li:nth-child(4n){
+	margin-right: 0;
+}
+.more-list-Case>li>img{
+	width: 285px;
+	height: 162px;
+}
+.more-list-des{
+	width: 285px;
+}
+.more-list-des>h1{
+	margin: 0 15px;
+	margin-top: 16px;
+	font-size: 14px;
+	color: #333333;
+}
+.more-list-des>h2{
+	margin: 0 15px;
+	margin-top: 16px;
+	font-size: 12px;
+	color: #666666;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}

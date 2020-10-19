@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>聚宴家</title>
+		<link rel="stylesheet" type="text/css" href="../css/styleAll.css"/>
+
+		
+
+	</head>
+	<script src="../js/require.js" type="text/javascript" charset="utf-8"></script>	
+	<body>
+		
+		<!--nav-->
+		<div class="nav2" style="">
+			<div class="nav_content layout">
+				<div class="position">
+					<h1></h1>
+					<h2 class="headCityV">上海</h2>
+					<h3 style="opacity: 0;">
+						<span>[</span>
+						<span class="change-city" >
+							切换
+							<div class="city-all" style="display: none;">
+								<div class="city-all-a">
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+								</div>
+							</div>
+						</span>
+						<span>]</span>
+					</h3>
+					
+				</div>
+				<!--<a href="index.html">聚宴家</a>-->
+				<a href="hotel.html">婚宴酒店</a>
+				<a href="caseMore.html">策划案例</a>
+				<a href="classroom.html">婚礼课堂</a>
+				<a href="http://backstage.jiudianhunyan.com" target="_blank">进入商家中心</a>
+			</div>
+			<script type="text/javascript">
+				$(".nav_content>a").css({'font-size':'14px'})
+				let localCityV=localStorage.getItem("city_name")
+				if(localCityV){
+					$(".headCityV").html(localCityV)
+				}else{
+					$(".headCityV").html('全国')
+				}
+			</script>
+			
+		</div>
+		
+		<!--————————————————————————————————婚礼策划————————————————————————————————————————————————————————-->
+		<ul class="dCase-head layout">
+			<li class="dCase-head-left">
+				<img src="../img/logo.png"/>
+				<h1 style="opacity: 0;">
+					<span>杭州</span>
+					<span>∨</span>
+				</h1>
+			</li>
+			
+			<li class="dCase-head-center">
+				<input class="searchV2" type="text" name="" id="" placeholder="搜您想要的" />
+				<h1 onclick="goSearch()">搜索</h1>
+			</li>
+			
+			<li class="dCase-head-right" style="display: flex;justify-content: flex-end;">
+				<a style="line-height: 85px; font-size: 16px; color: #666666;" href="#">联系电话：<span style="font-size: 20px; color: #F83244;" >400-855-1520</span></a>
+
+			</li>
+		</ul>
+		<div class="search-box layout" style="min-height: 700px;">
+			<p class="search-title">策划案例套餐</p>
+			<ul class="search-list" >
+				
+			</ul>
+			
+			<div style="width: 100%; display: flex; justify-content: flex-end; margin-top: 50px; margin-bottom: 100px;">
+				<div id="biuuu_city" style="color: red;">
+						
+				</div>
+			
+			</div>
+			
+		</div>
+		
+		
+				<!--————————————————底部footer——————————————————————-->
+		<div class="foot"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".foot").load("foot.html")
+			})
+		</script>
+		
+		<!--————————————————有测悬浮导航——————————————————————-->
+		<div class="go-top"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".go-top").load("backTop.html")
+			})
+		</script>
+	</body>
+			<script type="text/javascript">
+
+			onscroll=function(){
+//				getScrollTop()
+				if(getScrollTop()>650){
+					$("#hotHotel-position-nav").css("display","flex")
+				}else{
+					$("#hotHotel-position-nav").css("display","none")
+				}
+			}
+
+			$(".labels").bind("click touch",function(){
+                //根据a标签的href转换为id选择器，获取id元素所处的位置，并高度减50px（这里根据需要自由设置）
+                $('html,body').animate({scrollTop: ($($(this).attr('href')).offset().top -50 )},500);
+            })
+		
+		</script>
+	</body>
+	<script src="../allJs/laypage/laypage.js"></script>
+	<script src="../js/searchCase.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>聚宴家</title>
+		<link rel="stylesheet" type="text/css" href="../css/styleAll.css"/>
+
+
+	</head>
+	<script src="../js/require.js" type="text/javascript" charset="utf-8"></script>	
+	<body>
+		<!--nav-->
+		<div class="nav2" style="">
+			<div class="nav_content layout">
+				<div class="position">
+					<h1></h1>
+					<h2 class="headCityV">上海</h2>
+					<h3 style="opacity: 0;">
+						<span>[</span>
+						<span class="change-city" >
+							切换
+							<div class="city-all" style="display: none;">
+								<div class="city-all-a">
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+								</div>
+							</div>
+						</span>
+						<span>]</span>
+					</h3>
+					
+				</div>
+				<!--<a href="index.html">聚宴家</a>-->
+				<a href="hotel.html">婚宴酒店</a>
+				<a href="caseMore.html">策划案例</a>
+				<a href="classroom.html">婚礼课堂</a>
+				<a href="http://backstage.jiudianhunyan.com" target="_blank">进入商家中心</a>
+				
+			</div>
+			<script type="text/javascript">
+				$(".nav_content>a").css({'font-size':'14px'})
+				let localCityV=localStorage.getItem("city_name")
+				if(localCityV){
+					$(".headCityV").html(localCityV)
+				}else{
+					$(".headCityV").html('全国')
+				}
+			</script>
+			
+		</div>
+		
+		<!--头部搜索-->
+		<ul class="dCase-head layout">
+			<li class="dCase-head-left">
+				<img src="../img/logo.png"/>
+				<h1 style="opacity: 0;">
+					<span>杭州</span>
+					<span>∨</span>
+				</h1>
+			</li>
+			
+			<li class="dCase-head-center">
+				<input class="serachV"  type="text" name="" id="" placeholder="搜您想要的" />
+				<h1 onclick="goSearch()" >搜索</h1>
+			</li>
+			
+			<li class="dCase-head-right" style="display: flex;justify-content: flex-end;">
+				<a style="line-height: 85px; font-size: 16px; color: #666666;" href="#">联系电话：<span style="font-size: 20px; color: #F83244;" >400-855-1520</span></a>
+
+			</li>
+		</ul>
+		
+		
+		<div class="hotHotel layout">
+			<h1 class="dCase-title">
+				<a href="index.html">首页</a>
+				<span>></span>
+				<a href="hotel.html">婚宴酒店</a>
+				
+				<span>></span>	
+				<span class="hotelDetail-tag"></span>
+			</h1>
+			<div class="hotHotel-content">
+				<div class="hotHotel-content1">
+					<div class="hotHotel-showImg-content">
+						<!--<img class="hotHotel-showImg" src="../img/bg_show.jpg"/>-->
+					</div>
+					
+					<div class="hotHotel-content1-list">
+						<!--<img src="../img/bg_show.jpg"/>
+						<img src="../img/bg_jiehunmeitu.png"/>
+						<img src="../img/bg_show.jpg"/>
+						<img src="../img/bg_jiehunmeitu.png"/>
+						<img src="../img/bg_show.jpg"/>-->
+					</div>
+				</div>
+				<div class="hotHotel-content2">
+					
+					
+					
+				</div>
+				
+				
+				<div class=" hotHotel-contentbtn"  style="width:240px">
+					<p style="display: flex;justify-content:flex-end;margin-bottom: 20px;">找好友帮我参考</p>
+					<div style="display: flex;justify-content: flex-end;">
+						
+						<p onclick="copyUrl()" style="width:35px;height: 35px; border-radius: 50%; border: 1px solid #F83244; text-align: center;
+							line-height: 35px; ">
+							<span style="color: #F83244;line-height: 35px; font-size: 20px;" class="glyphicon glyphicon-share"></span>
+						</p> 
+						
+						 
+					</div>
+					<!--复制成功弹窗-->
+					<div class="dialog dialog-copy">
+							<div class="dialog-content" style="width:400px;height: 220px;">
+								<div class="pop-close-content">
+									<p class="pop-close">×</p>
+								</div>
+								<div class="dCase-phone">
+									
+									<p class="sub-message" style="font-size: 18px;line-height: 120px; margin-left: 25px;">复制链接地址成功，快点分享给好友吧~</p>
+								</div>
+								
+							</div>
+					</div>
+		<!--弹窗-->
+		<script type="text/javascript">
+			
+			showDialog()
+		</script>
+					<textarea id="urlVal" style="opacity: 0;">77777</textarea>
+					<script type="text/javascript">
+						function copyUrl(){
+							$(".dialog-copy").css({"display":"block"})
+							var Url2=document.getElementById("urlVal");
+							Url2.innerHTML=this.location.href
+							
+							Url2.select(); // 选择对象
+							document.execCommand("Copy"); // 执行浏览器复制命令
+							
+						}
+						
+					</script>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="hotelDetail layout">
+			<div class="hotelDetail-left">
+				<div class="hotelDetail-left-title">
+					<a class="hotelDetail-title-one  hotelDetail-title-active" href="#hunyanting">宴会厅</a>
+					<a href="#hunyancaidan">婚宴菜单</a>
+					<a href="#hunayanjiudian">酒店介绍</a>
+					<!--<a href="#">酒店优惠</a>
+					<a href="#">地理位置</a>
+					<a href="#">用户评价</a>-->
+				</div>
+				<div class="hotelDetail-left-name" id="hunyanting">
+					<img src="../img/icon_star1.png"/>
+					<span>宴会厅</span>
+					<i>点击图片预览婚宴厅大图</i>
+				</div>
+				
+				<ul class="hotelDetail-list">
+					
+					
+				</ul>
+				
+				
+				<div class="hotelDetail-left-name" id="hunyancaidan">
+					<img src="../img/icon_star1.png"/>
+					<span>菜单</span>
+
+				</div>
+				
+				<div class="hotelDetail-menu-content">
+					
+				</div>
+				
+
+				<div class="hotelDetail-intro">
+					<div class="hotelDetail-left-name" id="hunayanjiudian">
+						<img src="../img/icon_star1.png"/>
+						<span>酒店介绍</span>
+
+					</div>
+					<div class="hotelDetail-intro-msg">
+						<p>
+						</p>
+						
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			
+			<!--右侧热门婚宴酒店-->
+			<div class="hotelDetail-right">
+				<ul class="hotel-kind-right">
+					<h1 class="hotel-kind-right-title">热门婚宴酒店</h1>
+
+				</ul>
+			</div>
+		</div>
+		
+				<script type="text/javascript">
+			
+		</script>
+		
+		<!--————————————————底部footer——————————————————————-->
+		<div class="foot"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".foot").load("foot.html")
+			})
+		</script>
+		
+		<!--————————————————有测悬浮导航——————————————————————-->
+		<div class="go-top"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".go-top").load("backTop.html")
+			})
+		</script> 
+		
+		<div class="dialog" style="">
+			<div class="dialog-content-banner">
+				<div class="pop-close-content">
+					<p class="pop-close">×</p>
+				</div>
+				<div class="dialog-banner">
+					<div class="dialog-banner-box">
+						<div class="dialog-banner-show">
+							<img src="../img/bg_show.jpg"/>
+						</div>
+						
+						<h1 class="banner-left">
+
+						</h1>
+						<h1 class="banner-right">
+
+						</h1>
+					</div>
+				</div>
+				
+				<div class="dialog-banner-list" >
+					<img class="dialog-banner-active" src="../img/bg_jiehunmeitu.png"/>
+					<img src="../img/bg_show.jpg"/>
+				</div>
+				
+				<div class="dialog-banner-des">
+					
+				</div>
+				
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/hotelDetail.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>聚宴家</title>
+		<link rel="stylesheet" type="text/css" href="../css/styleAll.css"/>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css"/>
+	</head>
+	<script src="../js/require.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		
+
+	</style>
+	<body style="">
+		<!--悬浮头-->
+		<div class="head_fixed">
+			<div class="head_fixed_content layout">
+				<div class="head_fixed_left" >
+					<img src="../img/logo.png"/><a href="#">全国<span>∨</span></a>
+				</div>	
+				<div class="head_fixed_right">
+					<div class="head_fixed_seach">
+						<div class="head_fixed_seach_right">
+							<input type="" name="" id="" value="" />
+						</div>
+						<div class="head_fixed_seach_btn">
+							<img src="../img/icon_seach.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			onscroll=function(){
+//				getScrollTop()
+				if(getScrollTop()>36){
+					$(".head_fixed").css("display","block")
+				}else{
+					$(".head_fixed").css("display","none")
+				}
+
+			}
+		</script>
+		<div class="navs"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".navs").load("nav.html")
+			})
+		</script>
+		
+		<div class="head" style=""></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".head").load("head_home.html")
+			})
+		</script>
+		
+		<div class="city-seach-content layout" style="opacity: 0;">
+			<div class="city-seach ">
+				<div class="city-seach-left">
+					<input type="" name="" id="" value="" placeholder="搜索你所选的城市" />
+				</div>
+				<div class="city-seach-right">
+					搜索
+				</div>
+				
+				<ul class="city-seach-list">
+					<li>上海</li>
+					<li>北京</li>
+					<li>日本</li>
+					<li>美国</li>
+					<li>西藏</li>
+					<li>上海</li>
+					<li>北京</li>
+					<li>日本</li>
+					<li>美国</li>
+					<li>西藏</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(".city-seach-left input").click(function(){
+				$(".city-seach-list").css({"display":"block"})
+				return false
+			})
+			$(document).click(function(){
+				
+				$(".city-seach-list").css({"display":"none"})
+			})
+		</script>
+		
+		<div onclick="backCity()" class="city-country layout" style="color: #F83244;">
+			全国
+		</div>
+		<script type="text/javascript">
+		function backCity(){
+			window.history.go(-1); 
+			localStorage.setItem("city_id","")
+			localStorage.setItem("city_name","")
+		}
+			
+		</script>
+		<div class="city-hot layout">
+			<span class="cityhot-name">热门城市：</span>
+			
+		</div>
+		<div class="city-letter layout">
+			<span>按拼音首字母查找：</span>
+			<div class="city-letter-list">
+				
+			</div>
+		</div>
+	</body>
+	<div class="city-list layout">
+		<div class="city-list-item">
+			<span id="">A</span>
+			<div class="city-list-item-right">
+				
+			</div>
+			
+		</div>
+
+
+	</div>
+
+	
+		<!--————————————————底部footer——————————————————————-->
+		<div class="foot"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".foot").load("foot.html")
+			})
+		</script>
+		
+		<!--————————————————有测悬浮导航——————————————————————-->
+		<div class="go-top"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".go-top").load("backTop.html")
+			})
+		</script>
+		
+		<script src="../js/cities.js" type="text/javascript" charset="utf-8"></script>
+</html>

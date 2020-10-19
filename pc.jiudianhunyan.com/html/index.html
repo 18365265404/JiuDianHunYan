@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>聚宴家</title>
+		<link rel="stylesheet" type="text/css" href="../css/styleAll.css"/>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css"/>
+	</head>
+	<script src="../js/require.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		
+
+	</style>
+	<body style="">
+		<!--悬浮头-->
+		<div class="head_fixed">
+			<div class="head_fixed_content layout">
+				<div class="head_fixed_left" >
+					<img src="../img/logo.png"/><a class="headCityV" href="cities.html">全国<span>∨</span></a>
+				</div>	
+				<div class="head_fixed_right">
+					<div class="head_fixed_seach" >
+						<div class="head_fixed_seach_right">
+							<input class="serachVP" type="" name="" id="" value="" />
+						</div>
+						<div class="head_fixed_seach_btn" onclick="goSearchP()" >
+							<img src="../img/icon_seach.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+
+			onscroll=function(){
+//				getScrollTop()
+				if(getScrollTop()>36){
+					$(".head_fixed").css("display","block")
+				}else{
+					$(".head_fixed").css("display","none")
+				}
+			}
+		</script>
+		<div class="navs"></div>
+		<script type="text/javascript">
+			
+			$(function(){
+				$(".navs").load("nav.html")
+			})
+		</script>
+		
+		<div class="head" style=""></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".head").load("head_home.html")
+			})
+		</script>
+		<!--轮播图-->
+		<div class="home-banner">
+			   <!---------------轮播图---------------------->
+		  <div id="swiper_container" class="swiper-container swiper-container1">
+		    <div class="swiper-wrapper swiper-wrapper1" style="height:460px">
+		    	
+		    </div>
+		
+			<div class="swiper-pagination1 swiper-pagination" style=""></div>
+		  </div>
+		  
+		</div>
+		<!--定位在轮播图上的菜单-->
+		<div class="home-menue layout" style="display: none;">
+		  	<ul>
+		  		<li><p><img src="../img/icon_jiudian.png"/> <a href="#">婚宴酒店</a></p> <span>草坪/星级</span></li>
+		  		<li><p><img src="../img/icon_cehua.png"/> <a href="#">婚礼策划</a></p> <span>室内/室外</span></li>
+		  		<li><p><img src="../img/icon_paishe.png"/> <a href="#">婚礼摄影</a></p> <span>影楼/工作室</span></li>
+		  		<li><p><img src="../img/icon_siyi.png"/> <a href="#">婚礼司仪</a></p> <span>煽情/海派</span></li>
+		  		<li><p><img src="../img/icon_lifu.png"/> <a href="#">婚纱礼服</a></p> <span>高端定制</span></li>
+		  		<li><p><img src="../img/icon_paishe.png"/> <a href="#">婚礼摄影</a></p> <span>婚礼mv/摇臂</span></li>
+		  		<li><p><img src="../img/icon_genpai.png"/> <a href="#">婚礼跟拍</a></p> <span>纪实/双机位</span></li>
+		  		<li><p><img src="../img/icon_genzhuang.png"/> <a href="#">婚礼跟妆</a></p> <span>韩式/中式</span></li>
+		  		<li><p><img src="../img/icon_car.png"/> <a href="#">婚车租赁</a></p> <span>一价全包</span></li>
+		  	</ul>
+		 </div>
+		 <!--表单提交-->
+		 <div class="home-form-layout layout">
+		 	
+		 	
+		 
+		 <div class="home-form ">
+		 	<p>酒店特惠三步查</p>
+		 	<ul>
+		 		<li>
+		 			<span class="home-selct-city-value">全国</span><span>∨</span>
+		 			<ul class="home-selct-city">
+		 	
+		 			</ul>
+		 		</li>
+		 		
+		 		<li class="city-write-city">
+		 			<input class="regionName" type="" name="" id="" value="" placeholder="区域" /> <span class="	glyphicon glyphicon-pencil"></span> 
+		 		</li>
+		 		
+		 		<li>
+		 			<span class="home-selct-price-value">4000~5000元</span><span>∨</span>
+		 			<ul class="home-selct-price">
+		 				
+
+		 			</ul>
+		 		</li>
+		 	</ul>
+		 	
+		 	<div class="home-form-submit">
+		 		立即查询<img src="../img/icon_jiantou_right.png"/>
+		 	</div>
+		 </div>
+		 <div class="home-form-layout-center" style="overflow: hidden;">
+		 	
+		 </div>
+		 <div class="home-form-layout-right" style="overflow: hidden;">
+		 	
+		 </div>
+		 </div>
+		 <!---------------------------酒店三步查弹窗--------------------------------------------------->
+		 <div class="dialog dialog1" >
+				<div class="dialog-content" style="width: 500px;height: 350px;">
+					<div class="pop-close-content">
+						<p class="pop-close">×</p>
+					</div>
+					<div class="dCase-phone" style="display: block;">
+						<p style="line-height: 50px; width: 400px; font-size: 28px; text-align: center;">已为你找到符合条件的酒店</p>
+						<h1 style="font-size: 14px; text-align: center; margin: 5px;"><span>输入手机号,</span><span>，可获得聚宴家婚宴顾问免费咨询福利</span></h1>
+						<h1 style="font-size: 14px; text-align: center;  margin: 5px;"><span>领取城市专属,</span><span>，最高价值10000元备婚礼包</span></h1>
+						
+						<div style="width: 300px; height: 40px; border: 1px solid #CCCCCC; margin-left: 80px; margin-top: 30px;">
+							<input class="tel-phone" type="text" name="" id="" value="" placeholder="请输入你的手机号码" style="margin-left: 20px; margin-top: 8px;" />
+						</div>
+						<p class="ifPhone" style="font-size: 12px; color:#F83244; display: none; margin-left: 80px; margin-top: 10px;">!请输入真确的手机号吗</p>
+						<p class="sub-comment" style="width: 300px; margin-top: 30px ; border-radius:3px ; background: #F83244; color: white; text-align: center; line-height: 40px; font-size: 30px; margin-left: 80px;">点击提交</p>
+					</div>
+					
+				</div>
+		</div>
+		 
+		 <div class="dialog dialog2" >
+				<div class="dialog-content" style="width: 300px;height: 150px;">
+					<div class="pop-close-content">
+						<p class="pop-close">×</p>
+					</div>
+					<div class="dCase-phone">
+						
+						<p class="sub-message" style="line-height: 80px; font-size: 30px; margin-left: 75px;">提交成功</p>
+					</div>
+					
+				</div>
+		</div>
+		<!--弹窗-->
+		<script type="text/javascript">
+			
+			showDialog()
+		</script>
+
+		 <div class="home-hotel ">
+		 	<p>热门酒店推荐</p>
+		 	<ul class="layout home-hotel-list">
+
+		 	</ul>
+		 </div>
+		 
+		 <div class="home-photo" style="display: none;">
+		 	<p>热门旅拍推荐</p>
+		 	<ul class="layout">
+
+		 		<li>
+		 			<img src="../img/bg_show.jpg"/>
+		 			<div class="photo-second">
+		 				<h1>电饭锅干活很关键金龟换酒发过火是的发的发水电费水电费水电费 </h1>
+		 				<h2>三亚法师小面啊不</h2>
+		 				<h3><span>￥</span><span>4999</span></h3>
+		 			</div>
+		 		</li>
+		 		
+		 		<li>
+		 			<img src="../img/bg_show.jpg"/>
+		 			<div class="photo-second">
+		 				<h1>电饭锅干活很关键金龟换酒发过火是的发的发水电费水电费水电费 </h1>
+		 				<h2>三亚法师小面啊不</h2>
+		 				<h3><span>￥</span><span>4999</span></h3>
+		 			</div>
+		 		</li>
+		 		<li>
+		 			<img src="../img/bg_show.jpg"/>
+		 			<div class="photo-second">
+		 				<h1>电饭锅干活很关键金龟换酒发过火是的发的发水电费水电费水电费 </h1>
+		 				<h2>三亚法师小面啊不</h2>
+		 				<h3><span>￥</span><span>4999</span></h3>
+		 			</div>
+		 		</li>
+		 		<li>
+		 			<img src="../img/bg_show.jpg"/>
+		 			<div class="photo-second">
+		 				<h1>电饭锅干活很关键金龟换酒发过火是的发的发水电费水电费水电费 </h1>
+		 				<h2>三亚法师小面啊不</h2>
+		 				<h3><span>￥</span><span>4999</span></h3>
+		 			</div>
+		 		</li>
+		 		<li>
+		 			<img src="../img/bg_show.jpg"/>
+		 			<div class="photo-second">
+		 				<h1>电饭锅干活很关键金龟换酒发过火是的发的发水电费水电费水电费 </h1>
+		 				<h2>三亚法师小面啊不</h2>
+		 				<h3><span>￥</span><span>4999</span></h3>
+		 			</div>
+		 		</li>
+		 		
+		 		
+		 	</ul>
+		 </div>
+		 <!--————————————————热门策划案例————————————————————————-->
+		 <div class="home-case">
+		 	<p>热门策划案例</p>
+		 	
+		 	  <!-- Swiper -->
+			 <div class="swiper-container swiper-container3 swiper-no-swiping" id="swiper-container3" >
+			    <div class="swiper-wrapper swiper-wrapper3 swiper-no-swiping" >
+			      <!--<div class="swiper-slide">
+
+			      </div>-->
+			      
+			      
+			      
+			      
+			      
+			      
+			      
+
+
+			    </div>
+			    <!-- Add Pagination -->
+			    <div class="swiper-pagination swiper-pagination3" ></div>
+			  </div>
+			  
+			<div class="home-swiper-submit" onclick="window.open('caseMore.html')">
+		 		更多案例<img src="../img/icon_jiantou_right_white.png"/>
+		 	</div>
+		 </div>
+		 <div class="wedding-process">
+		 	<div class="wedding-process-bg">
+		 		婚礼流程
+		 	</div>
+		 	<ul class="wedding-process-content layout">
+		 		<li>
+		 			<div class="wedding-process-tab1">
+		 				<img src="../img/icon_hunyanjiudian.png"/>
+		 				<p>婚宴酒店</p>
+		 			</div>
+		 			<div class="wedding-process-tab2">
+		 				<h1>
+		 					<img src="../img/icon_hunyanjiudian2.png"/>
+		 				</h1>
+		 				
+		 				<h2>婚宴酒店</h2>
+		 				<h3>提前预约婚宴酒店</h3>
+		 			</div>
+		 			
+		 		</li>
+		 		
+		 		<li>
+		 			<div class="wedding-process-tab1">
+		 				<img src="../img/icon_hunshasheying.png"/>
+		 				<p>婚纱摄影</p>
+		 			</div>
+		 			<div class="wedding-process-tab2">
+		 				<h1>
+		 					<img src="../img/icon_hunshasheying2.png"/>
+		 				</h1>
+		 				
+		 				<h2>婚纱摄影</h2>
+		 				<h3>提前预约婚宴酒店</h3>
+		 			</div>
+		 			
+		 		</li>
+		 		
+		 		<li>
+		 			<div class="wedding-process-tab1">
+		 				<img src="../img/icon_hunqinggongsi.png"/>
+		 				<p>婚庆公司</p>
+		 			</div>
+		 			<div class="wedding-process-tab2">
+		 				<h1>
+		 					<img src="../img/icon_hunqinggongsi2.png"/>
+		 				</h1>
+		 				
+		 				<h2>婚庆公司</h2>
+		 				<h3>提前预约婚宴酒店</h3>
+		 			</div>
+		 			
+		 		</li>
+		 		
+		 		<li>
+		 			<div class="wedding-process-tab1">
+		 				<img src="../img/icon_hunshalifu.png"/>
+		 				<p>婚纱礼服</p>
+		 			</div>
+		 			<div class="wedding-process-tab2">
+		 				<h1>
+		 					<img src="../img/icon_hunshalifu2.png"/>
+		 				</h1>
+		 				
+		 				<h2>婚纱礼服</h2>
+		 				<h3>提前预约婚宴酒店</h3>
+		 			</div>
+		 			
+		 		</li>
+		 		
+		 		<li>
+		 			<div class="wedding-process-tab1">
+		 				<img src="../img/icon_hunliqingtie.png"/>
+		 				<p>婚礼请帖</p>
+		 			</div>
+		 			<div class="wedding-process-tab2">
+		 				<h1>
+		 					<img src="../img/icon_hunliqingtie2.png"/>
+		 				</h1>
+		 				
+		 				<h2>婚礼请帖</h2>
+		 				<h3>提前预约婚宴酒店</h3>
+		 			</div>
+		 			
+		 		</li>
+		 		
+		 		<li>
+		 			<div class="wedding-process-tab1">
+		 				<img src="../img/icon_hunchezuning.png"/>
+		 				<p>婚车租赁</p>
+		 			</div>
+		 			<div class="wedding-process-tab2">
+		 				<h1>
+		 					<img src="../img/icon_hunchezuning2.png"/>
+		 				</h1>
+		 				
+		 				<h2>婚车租赁</h2>
+		 				<h3>提前预约婚宴酒店</h3>
+		 			</div>
+		 			
+		 		</li>
+		 		
+		 		<li>
+		 			<div class="wedding-process-tab1">
+		 				<img src="../img/icon_hunliyongping.png"/>
+		 				<p>结婚用品</p>
+		 			</div>
+		 			<div class="wedding-process-tab2">
+		 				<h1>
+		 					<img src="../img/icon_hunliyongping2.png"/>
+		 				</h1>
+		 				
+		 				<h2>结婚用品</h2>
+		 				<h3>提前预约婚宴酒店</h3>
+		 			</div>
+		 			
+		 		</li>
+		 		
+		 		<li>
+		 			<div class="wedding-process-tab1">
+		 				<img src="../img/icon_juxinhunli.png"/>
+		 				<p>举行婚礼</p>
+		 			</div>
+		 			<div class="wedding-process-tab2">
+		 				<h1>
+		 					<img src="../img/icon_juxinhunli2.png"/>
+		 				</h1>
+		 				
+		 				<h2>举行婚礼</h2>
+		 				<h3>提前预约婚宴酒店</h3>
+		 			</div>
+		 			
+		 		</li>
+		 		
+		 		
+		 	</ul>
+		 	
+		 </div>
+		 
+		 <!--结婚美图-->
+		<div class="home-wedding-photo" style="display: none;">
+			<div class="home-wedding-photo-title">
+				结婚美图
+			</div>
+			<div class="home-wedding-photo-content">
+				<div class="home-wedding-photo-content1">
+					<img src="../img/bg_show.jpg"/>
+					<div class="home-show1">
+						<img src="../img/bg_show.jpg"/>
+						<div class="home-show1-des">
+							<a href="#">水下婚纱照</a>
+							<h2>提供水下婚纱照图片，水下婚纱照效果图片欣赏</h2>
+							<h3></h3>
+							<h6 class="red-jiantou">→</h6>
+						</div>
+					</div>
+				</div>
+				<ul class="home-wedding-photo-content2">
+					<li>
+						<a href="#">韩式婚纱照</a>
+						<h3></h3>
+					</li>
+					
+					<li>
+						<img src="../img/bg_show.jpg"/>
+					</li>
+					
+					<li>
+						<a href="#">韩式婚纱照</a>
+						<h3></h3>
+					</li>
+					
+					<li>
+						<img src="../img/bg_show.jpg"/>
+					</li>
+				</ul>
+				<ul class="home-wedding-photo-content3">
+					<li>
+						<a href="#">小清新婚礼布置</a>
+						<h2>小清新婚礼布置是时下最流新的婚礼布置，无论是室内还是室外都可以营造出一种清新浪漫的婚礼氛围，深受新人们的喜爱！</h2>
+						<h6 class="red-jiantou2">→</h6>
+					</li>
+					<li>
+						<div class="home-wedding-photo-content3-img">
+							<img src="../img/bg_show.jpg"/>
+						</div>
+						
+					</li>
+					
+				</ul>
+			</div>
+			<div class="home-wedding-photo-des">
+				<ul class="home-wedding-photo-tag">
+					<li><img src="../img/icon_tag.png"/><span>r热门标签</span><span>|</span></li>
+					<li><a href="#">新娘妈妈礼服</a></li>
+					<li><a href="#">秀禾服</a></li>
+					<li><a href="#">新郎伴郎媳妇</a></li>
+					<li><a href="#">婚礼气球布置</a></li>
+				</ul>
+				
+				<div class="home-swiper-submit">
+		 			更多美图<img src="../img/icon_jiantou_right_white.png"/>
+		 		</div>
+			</div>
+		</div>
+		<!--————————————————底部footer——————————————————————-->
+		<div class="foot"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".foot").load("foot.html")
+			})
+		</script>
+		
+		<!--————————————————有测悬浮导航——————————————————————-->
+		<div class="go-top"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".go-top").load("backTop.html")
+			})
+		</script>
+	</body>
+
+	<script src="../js/home.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+
+	
+	</script>
+</html>

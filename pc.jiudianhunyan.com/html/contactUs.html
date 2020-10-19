@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+		<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+		<meta charset="UTF-8">
+		<title>聚宴家</title>
+		<link rel="stylesheet" type="text/css" href="../css/styleAll.css"/>
+	</head>
+	<script src="../js/require.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	<style>
+  
+    /*百度地图接口样式*/
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+  </style>
+	<script src="../js/pack/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		
+		<div class="nav2" style=""></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".nav2").load("nav2.html")
+			})
+		</script>
+		<!--头部搜索-->
+		<ul class="dCase-head layout">
+			<li class="dCase-head-left">
+				<img src="../img/logo.png"/>
+				<h1 style="opacity: 0;">
+					<span>杭州</span>
+					<span>∨</span>
+				</h1>
+			</li>
+			
+			<li class="dCase-head-center">
+				<input class="serachV"  type="text" name="" id="" placeholder="搜您想要的" />
+				<h1 onclick="goSearch()" >搜索</h1>
+			</li>
+			
+			<li class="dCase-head-right" style="display: flex;justify-content: flex-end;">
+				<a style="line-height: 85px; font-size: 16px; color: #666666;" href="#">联系电话：<span style="font-size: 20px; color: #F83244;" >400-855-1520</span></a>
+
+			</li>
+		</ul>
+
+		<div class=" layout" style="padding-top: 30px;">
+			<p style="line-height: 50px; font-size: 16px; color:#F83244; border-bottom: 2px solid #F93244;">联系我们</p>
+			<p style="line-height: 50px; font-size: 20px;">公司名称：上海聚航信息科技有限公司</p>
+			<p style="line-height: 50px; font-size: 20px;">联系方式：400-855-1520</p>
+			<p style="line-height: 50px; font-size: 20px;">公司地址：上海市黄浦区河南南路33号</p>
+			<p style="line-height: 50px; font-size: 20px;">邮政编码：200002</p>
+		</div>
+
+<div class="contactUs-content" id="showCenter" style="margin: 60px 0;">
+
+  		<div class="contactUs-content-map">
+  			<div class="contactUs-content-map-img">
+  				<!--百度地图容器-->
+  				<div style="width:1200px;height:390px;border:#ccc solid 1px; margin:0 auto" id="dituContent"></div>
+  			</div>
+  		</div>
+	
+</div>
+
+<!--————————————————底部footer——————————————————————-->
+		<div class="foot"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".foot").load("foot.html")
+			})
+		</script>	
+	</body>
+	  <!-- Swiper JS -->
+ <script src="../js/pack/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
+ <script src="../js/banner.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(121.493924,31.234941);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    
+    initMap();//创建和初始化地图
+</script>
+	<script type="text/javascript">
+	//搜索跳转
+	function goSearch(){
+	
+		window.location.href=encodeURI('searchHotel.html?id='+$(".serachV").val());
+	
+	}
+	</script>
+</html>

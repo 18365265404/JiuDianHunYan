@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>聚宴家</title>
+		<link rel="stylesheet" type="text/css" href="../css/styleAll.css"/>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+	</head>
+	<script src="../js/require.js" type="text/javascript" charset="utf-8"></script>	
+	<body>
+		<div class="nav2" style=""></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".nav2").load("nav2.html")
+			})
+		</script>
+		
+		<div class="home-search layout">
+			<img src="../img/logo.png"/>
+			<div class="head_fixed_right home-search-center">
+				<div class="head_fixed_seach ">
+					<div class="head_fixed_seach_right home-search-center-right">
+						<input class="serachV" type="" name="" id="" value="" />
+					</div>
+					<div class="head_fixed_seach_btn  home-search-center-btn" onclick="goSearch()">
+						搜索
+					</div>
+				</div>
+			</div>
+			<div class="home-search-tel">
+				<h1>聚宴家客服热线</h1>
+				<h2>400-855-1520</h2>
+			</div>
+		</div>
+		
+		<ul class="hotel-banner layout">
+			<li class="hotel-bannerOne">
+				<img src="../img/icon_search3.png"/>
+				<div class="hotel-banner-earch1 hotel-banner-earch11">
+					<p><span>1</span><span class="home-selct-city-value ">全国</span></p>  <p>∨</p>
+					<div class="hotel-banner-content hotel-banner-content1">
+						<ul class="home-selct-city">
+		 				
+		 			</ul>
+					</div>
+					
+				</div>
+				
+				<div class="hotel-banner-earch1 hotel-banner-earch2">
+					<p><span>2</span></p> <input class="regionName" type="" name="" id="" value="" placeholder="区域" /> <span class="hotel-pen glyphicon glyphicon-pencil"></span> 
+				</div>
+				
+				<div class="hotel-banner-earch1 hotel-banner-content3">
+					<p><span>3</span><span class="home-selct-price-value">0元</span></p>  <p>∨</p>
+					<div class="hotel-banner-content hotel-banner-content2">
+						<ul class="home-selct-price ">
+		 				
+		 			</ul>
+					</div>
+					
+				</div>
+				
+				<div class="hotel-sub3 home-form-submit" >
+					立即查询
+				</div>
+			</li>
+			
+			<li style="width: 920px;height: 413px;" onclick="window.open('http://p.qiao.baidu.com/cps/chat?siteId=12777208&userId=26759148', '_blank')" >
+				<img src="../img/home_imgs.jpg"/ style="width: 100%;height: 100%; border-radius: 5px;">
+				
+			</li>
+			
+			
+			
+			
+		</ul>
+		
+		
+		<!---------------------------酒店三步查弹窗--------------------------------------------------->
+		 <div class="dialog dialog1" >
+				<div class="dialog-content" style="width: 500px;height: 350px;">
+					<div class="pop-close-content">
+						<p class="pop-close">×</p>
+					</div>
+					<div class="dCase-phone" style="display: block;">
+						<p style="line-height: 50px; width: 400px; font-size: 28px; text-align: center;">已为你找到符合条件的酒店</p>
+						<h1 style="font-size: 14px; text-align: center; margin: 5px;"><span>输入手机号,</span><span>，可获得聚宴家婚宴顾问免费咨询福利</span></h1>
+						<h1 style="font-size: 14px; text-align: center;  margin: 5px;"><span>领取城市专属,</span><span>，最高价值10000元备婚礼包</span></h1>
+						
+						<div style="width: 300px; height: 40px; border: 1px solid #CCCCCC; margin-left: 80px; margin-top: 30px;">
+							<input class="tel-phone" type="text" name="" id="" value="" placeholder="请输入你的手机号码" style="margin-left: 20px; margin-top: 8px;" />
+						</div>
+						<p class="ifPhone" style="font-size: 12px; color:#F83244; display: none; margin-left: 80px; margin-top: 10px;">!请输入正确的手机号吗</p>
+						<p class="sub-comment" style="width: 300px; margin-top: 30px ; border-radius:3px ; background: #F83244; color: white; text-align: center; line-height: 40px; font-size: 30px; margin-left: 80px;">点击提交</p>
+					</div>
+					
+				</div>
+		</div>
+		 
+		 <div class="dialog dialog2" >
+				<div class="dialog-content" style="width: 300px;height: 150px;">
+					<div class="pop-close-content">
+						<p class="pop-close">×</p>
+					</div>
+					<div class="dCase-phone">
+						
+						<p class="sub-message" style="line-height: 80px; font-size: 30px; margin-left: 75px;">提交成功</p>
+					</div>
+					
+				</div>
+		</div>
+		<!--弹窗-->
+		<script type="text/javascript">
+			
+			showDialog()
+		</script>
+
+		<script type="text/javascript">
+//			$("#hotel-canlender-content .dropdown-menu").css({
+//				"position":"absolute",
+//				"left":"300px",
+//				"top":"30px",
+//				"background":"red"
+//			})
+	
+            //初始化
+            $('.form_date').datetimepicker({
+                language: 'zh-CN',
+                todayBtn : true,
+                bootcssVer:3,
+                
+        		startDate: new Date(),
+                minView: 2,
+			    format: 'yyyy-mm-dd',//显示格式
+			    autoclose: true,//选中自动关闭
+			    pickerPosition:'bottom-right',
+        		initialDate:new Date(),
+            });
+            $("#datetimeStart").datetimepicker("setDate", new Date());
+            
+            //获取当前时间
+			var date = new Date();
+			var year = date.getFullYear();
+			var month = date.getMonth() + 1;
+			var day = date.getDate();
+			if (month < 10) {
+			    month = "0" + month;
+			}
+			if (day < 10) {
+			    day = "0" + day;
+			}
+			var nowDate = year + "-" + month + "-" + day;
+			$('#datetimepicker').val(nowDate)
+//			alert(nowDate)
+
+		 	$(".home-selct-city li ").click(function(){
+		 		
+		 		$(".home-selct-city-value").html($(this).html())
+		 		$(".hotel-banner-content").css({"display":"none"})
+		 	})
+		 	
+		 	$(".home-selct-price li ").click(function(){
+		 		
+		 		$(".home-selct-price-value").html($(this).html())
+		 		$(".hotel-banner-content").css({"display":"none"})
+		 	})
+		 	
+		 	$('.hotel-banner-earch1').mouseenter(function(){ 
+				   $(this).children('.hotel-banner-content').css({"display":"block"})
+			})
+		 	$('.hotel-banner-earch1').mouseleave(function(){ 
+				   $(this).children('.hotel-banner-content').css({"display":"none"})
+			})
+		 </script>
+		
+		<!--酒店类型-->
+		<div class="hotel-kind layout">
+			<div class="hotel-kind-left">
+				<div class="hotel-kind-head">
+					<div class="hotel-kind-head-left"><h1></h1> <span>酒店类型</span></div>  
+					<a href="hotlMore.html" class="hotel-kind-head-right">更多 ></a> 
+				</div>
+				
+				<div class="hotel-kind-title hotel-kind-title1">
+					<p class="hotel-title-active">全部</p>
+					<p>婚礼会所</p>
+					<p>特色餐厅</p>
+					<p>奢华五星</p>
+					<p>豪华四星</p>
+					<p>婚礼堂</p>
+					<p>其它酒店</p>
+				</div>
+				
+				<ul class="hotel-kind-content hotel-kind-content1">
+
+					
+				</ul>
+				
+				<!--酒店区域-->
+				<div class="hotel-kind-head">
+					<div class="hotel-kind-head-left"><h1></h1> <span>酒店区域</span></div>  
+					<a href="hotlMore.html" class="hotel-kind-head-right">更多 ></a> 
+				</div>
+				
+				<div class="hotel-kind-title hotel-kind-title2">
+					<p class="hotel-title-active">全部</p>
+					<p>婚礼会所</p>
+					<p>特色餐厅</p>
+					<p>奢华五星</p>
+					<p>豪华四星</p>
+					<p>婚礼堂</p>
+					<p>其它酒店</p>
+				</div>
+				
+				<ul class="hotel-kind-content hotel-kind-content2">					
+
+				</ul>
+			</div>
+			
+			<ul class="hotel-kind-right">
+				<h1 class="hotel-kind-right-title">热门婚宴酒店</h1>
+				
+			</ul>
+		</div>
+		<script type="text/javascript">
+			$(".hotel-kind-title1 p").click(function(){
+				$(".hotel-kind-title1 p").removeClass("hotel-title-active")
+				$(this).addClass("hotel-title-active")
+//				$(this).css({"color":"red","border":"1px solid #cccccc","border-bottom":"none","border-top":"2px solid red"})
+			})
+			
+			$(".hotel-kind-right li").mouseenter(function(){
+//				$(".hotel-kind-right li").find(".hotel-hot").removeClass("hotel-hot-gone")
+//				$(this).find("ul").addClass("hotel-hot-gone")
+				$(".hotel-kind-right li").find(".hotel-hot").css({"display":"none"})
+				$(this).find(".hotel-hot").css({"display":"block"})
+//				alert()
+			}).mousemove(function (){  
+            	$(this).find(".hotel-hot").css({"display":"block"})
+        });  
+		</script>
+		
+		
+		<!--————————————————底部footer——————————————————————-->
+		<div class="foot"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".foot").load("foot.html")
+			})
+		</script>
+		
+		<!--————————————————有测悬浮导航——————————————————————-->
+		<div class="go-top"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".go-top").load("backTop.html")
+			})
+		</script>
+	</body>
+</html>
+<script src="../js/hotel.js" type="text/javascript" charset="utf-8"></script>

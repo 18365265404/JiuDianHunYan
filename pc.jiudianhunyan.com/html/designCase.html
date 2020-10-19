@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>聚宴家</title>
+		<link rel="stylesheet" type="text/css" href="../css/styleAll.css"/>
+
+		
+
+	</head>
+	<script src="../js/require.js" type="text/javascript" charset="utf-8"></script>	
+	<body>
+		
+		<!--nav-->
+		<div class="nav2" style="">
+			<div class="nav_content layout">
+				<div class="position">
+					<h1></h1>
+					<h2 class="headCityV">上海</h2>
+					<h3 style="opacity: 0;">
+						<span>[</span>
+						<span class="change-city" >
+							切换
+							<div class="city-all" style="display: none;">
+								<div class="city-all-a">
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+									<a href="#">北京</a>
+								</div>
+							</div>
+						</span>
+						<span>]</span>
+					</h3>
+					
+				</div>
+				<!--<a href="index.html">聚宴家</a>-->
+				<a href="hotel.html">婚宴酒店</a>
+				<a href="caseMore.html">策划案例</a>
+				<a href="classroom.html">婚礼课堂</a>
+				<a href="http://backstage.jiudianhunyan.com" target="_blank">进入商家中心</a>
+				
+			</div>
+			<script type="text/javascript">
+				
+				$(".nav_content>a").css({'font-size':'14px'})
+				let localCityV=localStorage.getItem("city_name")
+				if(localCityV){
+					$(".headCityV").html(localCityV)
+				}else{
+					$(".headCityV").html('全国')
+				}
+				
+			</script>
+			
+		</div>
+		
+		<!--————————————————————————————————婚礼策划————————————————————————————————————————————————————————-->
+		<ul class="dCase-head layout">
+			<li class="dCase-head-left">
+				<img src="../img/logo.png"/>
+				<h1 style="opacity: 0;">
+					<span>杭州</span>
+					<span>∨</span>
+				</h1>
+			</li>
+			
+			<li class="dCase-head-center">
+				<input class="serachV" type="text" name="" id="" placeholder="搜您想要的" />
+				<h1 onclick="goSearch()">搜索</h1>
+			</li>
+			
+			<li class="dCase-head-right" style="display: flex;justify-content: flex-end;">
+				<a style="line-height: 85px; font-size: 16px; color: #666666;" href="#">联系电话：<span style="font-size: 20px; color: #F83244;" >400-855-1520</span></a>
+
+			</li>
+		</ul>
+		
+
+		
+		<div class="dCase-content layout">
+			
+			<div class="dCase-left">
+				<h1 class="dCase-title">
+					<a href="index.html">首页</a>
+					<span>></span>
+					<a href="caseMore.html">策划案例</a>
+					<span>></span>
+					<span class="case-name"></span>
+				</h1>
+				
+				<!--轮播图-->
+				<div class="dCase-banner">
+					<!---------------轮播图---------------------->
+					<div id="swiper_container" class="swiper-container swiper-container4">
+					    <div class="swiper-wrapper swiper-wrapper1" >
+					    	
+					    </div>
+					    
+					    <div class="swiper-pagination pagination-num"></div>
+					    
+					    <div class="swiper-button-next  next-btn next-btn-left"></div>
+					    <div class="swiper-button-prev next-btn next-btn-right"></div>
+										
+					</div>
+					  
+					
+					
+					<!--轮播描述-->
+					<div class="dCase-banner-des">
+						<div class="dCase-banner-one">
+							
+						</div>
+						<div class="dCase-banner-des1">
+							<h1></h1>
+							<h2>
+								<span></span>
+								<a href="#">
+									<span class="glyphicon glyphicon-share"></span>
+									<span>分享</span>
+								</a>
+							</h2>
+						</div>
+						<h3 class="dCase-banner-des2"></h3>
+						<h4 class="dCase-banner-des3"></h4>
+					</div>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+			</div>
+			<!--大右边的描述-->
+			<div class="dCase-right">
+				<div class="dCase-right1">
+					
+					<img src="../img/bg_show.jpg"/>
+					<img class="img-crown" src="../img/icon_crown.png"/>
+					<p class="dCase-nickName"></p>
+					<div class="dCase-btn" style="display: flex;flex-direction: column;">
+						<h1 style="font-size: 16px;text-align: center;"><span style="color: #666666;"></span><span id="shopName">妙可人</span></h1>
+						<a class="pop" href="#"  data-toggle="modal" data-target="#myModal" >电话联系</a>
+						
+					</div>
+					
+					<h3 class="dCase-dotted"></h3>
+					<div class="dCase-comment">
+						<h4 class="dCase-star">
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span></span>
+						</h4>
+						<h5>100%好评</h5>
+					</div>
+				</div>
+
+
+			<div class="dialog">
+				<div class="dialog-content" style="height: 150px;">
+					<div class="pop-close-content">
+						<p class="pop-close">×</p>
+					</div>
+					<div class="dCase-phone">
+						<img src="../img/icon_phone.jpg"/>
+						<p class="dCase-phone-num">1101101100</p>
+					</div>
+					<!--<div class="pop-line">
+						
+					</div>
+					<h1>您还可以扫描二维码下载聚宴家APP</h1>
+					<h2>领取专享优惠</h2>
+					<img src="../img/bg_show.jpg"/>-->
+				</div>
+			</div>
+
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+
+			showDialog()
+		</script>
+		
+<!--_____________________轮播图的下面list_________________________________________-->				
+		<div class="layout">
+			
+			<!--商家案例-->
+				<!--标题-->
+				<h1 class="dCase-headline" style="display: flex; justify-content: space-between;"><span>商家案例</span><span></span></h1>
+				<ul class="dCase-case dCase-case1">
+					
+					
+				</ul>
+		
+				<!--相关推荐-->
+				<!--标题-->
+				<h1 class="dCase-headline dCase-headline2">相关推荐</h1>
+				<ul class="dCase-case dCase-case2">
+					
+				</ul>
+			
+		</div>
+		
+		<!--————————————————底部footer——————————————————————-->
+		<div class="foot"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".foot").load("foot.html")
+			})
+		</script>
+		
+		<!--————————————————有测悬浮导航——————————————————————-->
+		<div class="go-top"></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".go-top").load("backTop.html")
+			})
+		</script>
+		
+		
+		
+		
+	</body>
+	<script src="../js/designCase.js" type="text/javascript" charset="utf-8"></script>
+</html>

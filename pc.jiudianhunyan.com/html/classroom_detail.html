@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>聚宴家</title>
+		<link rel="stylesheet" type="text/css" href="../css/styleAll.css"/>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/classroom_detail.css"/>
+	</head>
+	<script src="../js/require.js" type="text/javascript" charset="utf-8"></script>	
+	<body>
+		<div class="nav2" style=""></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".nav2").load("nav2.html")
+			})
+		</script>
+		<div class="csd_bar_box">
+			<div class="layout csd_bar">
+				<h1>婚礼课堂详情</h1>
+			</div>
+		</div>
+		<div class="crd_content layout">
+			<h1 class="crd-title" id="crd_title"></h1>
+			<h2><span>时间：</span><span id="crd_time"></span></h2>
+			<div class="crd_des" id="crd_imgText">
+				
+			</div>
+		</div>
+
+		
+	</body>
+</html>
+<script type="text/javascript">
+	var classroom_id = localStorage.getItem("classroom_id")
+$.ajax({
+	type:"post",
+	url:myServer+"details/selectWeddingClassDetails",
+ 	dataType:"json",
+	data:{
+		weddingClassId:classroom_id
+	},
+	success:function(data){
+		console.log("2222222222",data.data)
+		if(data.data!=undefined){
+			var obj=data.data
+			$("#crd_title").html(obj.title)
+			$("#crd_time").html(obj.createTime)
+			$("#crd_imgText").html(obj.imgTex)
+
+		}
+		
+		
+	},
+	error:function(data){
+		
+	}
+
+});
+</script>

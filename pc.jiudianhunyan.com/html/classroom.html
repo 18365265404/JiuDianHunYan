@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>聚宴家</title>
+		<link rel="stylesheet" type="text/css" href="../css/styleAll.css"/>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/classroom.css"/>
+		
+	</head>
+	<script src="../js/require.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="../allJs/packageJs/pageMe.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<div class="nav2" style=""></div>
+		<script type="text/javascript">
+			$(function(){
+				$(".nav2").load("nav2.html")
+			})
+		</script>
+		<div id="classroom">
+			<div id="classroom_box"  class="layout">
+				<div class="logo_box">
+					<span>婚礼课堂</span>
+				</div>
+				<ul class="title_list">
+					<li class="active_title">精选</li>
+					<li>备婚流程</li>
+					<li>婚品清单</li>
+					<li>婚礼花费</li>
+					<li>大婚当天</li>
+				</ul>
+			</div>
+		</div>
+		<ul id="cr_content" class="layout">
+			<!--<li>
+				<div class="des_box1">
+					<h1>领证只带户口本＆身份证？漏了这件小物可要后悔！</h1>
+					<span>2012年9月</span>
+				</div>
+				<div class="des_box2">
+					<h1>十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚礼💒了？❌ No No No ❗️现在的农村婚礼早就不是土丑俗的代名词了，抓住这几个点这样布置比在城市还要高大上‼️美到没朋友❤</h1>
+
+				</div>
+				<div class="des_box3">
+					<img src="../img/bg_show.jpg"/>
+					<img src="../img/bg_show.jpg"/>
+					<img src="../img/bg_show.jpg"/>
+				</div>
+				
+			</li>
+			
+			<li>
+				<div class="des_box1">
+					<h1>领证只带户口本＆身份证？漏了这件小物可要后悔！</h1>
+					<span>2012年9月</span>
+				</div>
+				<div class="des_box2">
+					<h1>十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚礼💒了？❌ No No No ❗️现在的农村婚礼早就不是土丑俗的代名词了，抓住这几个点这样布置比在城市还要高大上‼️美到没朋友❤</h1>
+
+				</div>
+				<div class="des_box3">
+					<img src="../img/bg_show.jpg"/>
+					<img src="../img/bg_show.jpg"/>
+					<img src="../img/bg_show.jpg"/>
+				</div>
+				
+			</li>
+			
+			<li>
+				<div class="des_box1">
+					<h1>领证只带户口本＆身份证？漏了这件小物可要后悔！</h1>
+					<span>2012年9月</span>
+				</div>
+				<div class="des_box2">
+					<h1>十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚礼💒了？❌ No No No ❗️现在的农村婚礼早就不是土丑俗的代名词了，抓住这几个点这样布置比在城市还要高大上‼️美到没朋友❤</h1>
+
+				</div>
+				<div class="des_box3">
+					<img src="../img/bg_show.jpg"/>
+					<img src="../img/bg_show.jpg"/>
+					<img src="../img/bg_show.jpg"/>
+				</div>
+				
+			</li>
+			
+			<li>
+				<div class="des_box1">
+					<h1>领证只带户口本＆身份证？漏了这件小物可要后悔！</h1>
+					<span>2012年9月</span>
+				</div>
+				<div class="des_box2">
+					<h1>十八线城市的十八线县城的小农村就办不了属于自己的梦幻婚礼💒了？❌ No No No ❗️现在的农村婚礼早就不是土丑俗的代名词了，抓住这几个点这样布置比在城市还要高大上‼️美到没朋友❤</h1>
+
+				</div>
+				<div class="des_box3">
+					<img src="../img/bg_show.jpg"/>
+					<img src="../img/bg_show.jpg"/>
+					<img src="../img/bg_show.jpg"/>
+				</div>
+				
+			</li>-->
+		</ul>
+		
+					<!--分页-->
+		<div style="width: 100%; display: flex; justify-content: flex-end; margin-top: 50px; margin-bottom: 100px;">
+			<div id="biuuu_city" style="">
+				
+			</div>
+	
+		</div>
+		
+	</body>
+</html>
+<script src="../allJs/laypage/laypage.js"></script>
+<script type="text/javascript">
+	
+
+/*************************************描述内容************************************************/
+var pamasList={
+	pageNum:"1",
+	type:"精选"
+}
+
+
+
+initAjax()
+function initAjax(){
+	console.log("pamas",pamasList)
+	$.ajax({
+		type:"post",
+		url:myServer+"index/selectWeddingClass",
+	 	dataType:"json",
+		data:pamasList,
+		success:function(data){
+			console.log("婚礼课堂",data)
+			let pages=data.data.pages
+			let total=data.data.total
+
+			initPage(pages,total)
+		    
+
+			
+
+			let list=data.data.list
+
+			innerContent(list)
+			
+		
+			
+		},
+		error:function(data){
+			
+		}
+	
+	});
+}
+
+function initPage(pages,total){
+	
+	//显示分页
+    laypage({
+        cont: 'biuuu_city', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
+        pages: pages, //通过后台拿到的总页数
+        curr: parseInt(pamasList.pageNum) || 1, //当前页
+        skip: true, //是否开启跳页
+		skin: '#AF0000',
+        jump: function(obj, first){ //触发分页后的回调
+            if(!first){ //点击跳页触发函数自身，并传递当前页：obj.curr
+            	pamasList.pageNum=obj.curr
+            	initAjax()
+            }
+        },
+    });
+//	$("#page").paging({
+//      pageNum: parseInt(pamasList.pageNum), // 当前页面
+//      totalNum: pages, // 总页码
+//      totalList: total, // 记录总数量
+//      callback: function (num) { //回调函数
+//      	pamasList.pageNum=num
+//          initAjax()
+//      }
+//  });
+}
+
+function innerContent(list){
+	var str=''
+	list.forEach(function(v,i){
+		str+=`
+		
+			<li onclick="showDetail('${v.id}')">
+				<div class="des_box1">
+					<h1>${v.title}</h1>
+					<span>${v.createTime}</span>
+				</div>
+				<div class="des_box2">
+					<h1>${v.tex}</h1>
+
+				</div>
+				<div class="des_box3">
+					${showImg(v.pictureUrls)}
+				</div>
+				
+			</li>
+		`
+	})
+	
+	$("#cr_content").html(str)
+}
+function showDetail(id){
+	localStorage.setItem("classroom_id",id)
+	
+	window.location.href="classroom_detail.html"
+}
+
+function showImg(imgs){
+	var pictureList=imgs.split(",")
+	let strs=''
+	pictureList.forEach(function(v,i){
+		strs+=`
+			<img src="${QiNiu+v}"/>
+		`
+		
+	})
+	return strs;
+}
+
+
+
+$(".title_list li").click(function(){
+	$(".title_list li").removeClass("active_title")
+	$(this).addClass("active_title")
+	pamasList.type=$(this).html()
+	initAjax()
+})
+</script>

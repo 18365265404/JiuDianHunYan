@@ -1,0 +1,36 @@
+.csd_bar_box{
+	background: #F5F5F5;
+	margin-top: 0px;
+	padding-top: 5px;
+}
+.csd_bar{
+
+	height: 50px;
+	background: #F5F5F5;
+	/*padding-top: 10px;*/
+}
+.csd_bar h1{
+	color: white;
+	font-size: 18px;
+	line-height: 30px;
+	display: block;
+	width: 130px;
+	text-align: center;
+	background: #F83244;
+	border: 1px solid #F83244;
+
+	border-radius: 15px;
+}
+
+.crd_content h1{
+	font-size: 32px;
+	font-weight: 700;
+}
+.crd_content h2{
+	font-size: 14px;
+	color: #666666;
+}
+.crd_des{
+	width: 1200px;
+	overflow-y: hidden;
+}

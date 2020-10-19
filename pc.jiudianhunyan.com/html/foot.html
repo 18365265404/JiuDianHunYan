@@ -1,0 +1,106 @@
+<div class="footer" >
+
+	<div class="footer3 " style="display: flex;background: #FAFAFA;">
+		<div class="footer3-box layout" style="display: flex;padding: 30px 0;">
+			<ul>
+				<li style=" margin-top: 10px;font-size: 18px; color:#333333"> 婚礼管家咨询热线</li>
+				<li style="margin-top: 10px;font-size: 22px;color: #FF4773;">400-855-1520</li>
+				<li style="margin-top: 10px;font-size: 12px; color: #666666;"><span>工作时间：早10:00--晚7:00</span></li>
+			</ul>
+			<ul style="margin-left: 60px;">
+				<li style="margin-top: 10px;font-size: 18px;color:#333333"> 关于我们</li>
+				<li onclick="(window.location.href='aboutUs.html')" style="color: #666666; margin-top: 10px;font-size: 12px;">品牌简介</li>
+			</ul>
+			
+			<ul style="margin-left: 60px; position: relative;">
+				<li style="margin-top: 10px;font-size: 18px;color:#333333"> 关注我们</li>
+				<li id="showWx" onclick="(window.location.href='aboutUs.html')" style=" margin-top: 10px;font-size: 12px;">关注微信
+				</li>
+				<img  id="wxImg" style="display: none; border: 1px solid red; position: absolute;right: -70px;top: 20px; height: 70px;width: 70px;" src="../img/icon_ercode.png"/>
+
+			</ul>
+			<ul style="margin-left: 60px;">
+				<li style="margin-top: 10px;font-size: 18px;"> 联系我们</li>
+				<li  style="margin-top: 10px;font-size: 14px;color: #666666;">联系地址：上海市黄浦区河南南路33号10层IJ号</li>
+			</ul>
+		</div>
+		
+	</div>
+
+
+	<div class="footer1" style="padding-bottom: 50px;">
+		<div class="footer-youqing layout">
+			<p style="width: 95px;">友情链接：</p>
+			<ul class="footer-youqing-ul">
+
+			</ul>
+		</div>
+
+	</div>
+	<div class="footer2" style="height: 30px; display: flex;justify-content: center;">
+		<ul style="margin-top: -18px; display: flex;justify-content: center;">
+			
+			<li style="">备案信息：沪ICP备18018939号</li>
+		</ul>
+		
+	</div>
+	<!--<div class="footer2">
+		<ul>
+			<li> &nbsp;公司：上海聚航信息科技有限公司 </li>
+			<li style="">备案信息：沪ICP备18018939号</li>
+		</ul>
+		<ul>
+			<li>&nbsp;通讯地址：上海市黄浦区河南南路33号10层IJ号</li>
+			<li>客服热线：400-855-1520</li>
+		</ul>
+	</div>-->
+	
+
+	
+	
+</div>
+<script type="text/javascript">
+	$("#showWx").hover(function(){
+		$("#wxImg").show()
+		
+	},function(){
+    	$("#wxImg").hide()
+	});
+</script>
+
+<script type="text/javascript">
+	/***************************查询热门酒店  右侧的列表**********************************************/
+$.ajax({
+	type:"post",    //请求方式
+	url:myServer+jyj_indexSelectFriendshipLinks,
+	dataType:"json",
+	data:{
+
+	},    //请求参数		
+	success: function(data) {
+		if(data.status=='503'){
+			window.location.href='error.html'
+		}
+		console.log("友情链接",data.data)
+		
+		let linkList=data.data
+		let str=""
+
+		for(let i=0;i<linkList.length;i++){
+			 str+=`
+
+				<li><a href="${linkList[i].link},_black">${linkList[i].linkName}</a></li>		
+		    `
+		}
+	
+		
+		
+		$(".footer-youqing-ul").html(str)
+
+
+	},
+	error: function() {
+		//请求出错处理
+		}
+	});	
+</script>

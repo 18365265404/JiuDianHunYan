@@ -1,0 +1,43 @@
+<div class="nav_content layout">
+	<div class="position">
+		<h1></h1>
+		<h2 class="headCityV">上海</h2>
+		<h3>
+			<span>[</span>
+			<span class="change-city" onclick="(window.location.href='cities.html')">
+				切换
+				<div class="city-all" style="display: none;">
+					<div class="city-all-a">
+						<a href="#">北京</a>
+						<a href="#">北京</a>
+						<a href="#">北京</a>
+						<a href="#">北京</a>
+						<a href="#">北京</a>
+						<a href="#">北京</a>
+						<a href="#">北京</a>
+						<a href="#">北京</a>
+					</div>
+				</div>
+			</span>
+			<span>]</span>
+		</h3>
+		
+	</div>
+	<!--<a href="index.html">聚宴家</a>-->
+	<a href="hotel.html">婚宴酒店</a>
+	<a href="caseMore.html">策划案例</a>
+	<a href="classroom.html">婚礼课堂</a>
+	<a href="http://backstage.jiudianhunyan.com" target="_blank">进入商家中心</a>
+
+</div>
+<script type="text/javascript">
+	let localCityV=localStorage.getItem("city_name")
+	if(localCityV){
+		$(".headCityV").html(localCityV)
+	}else{
+		$(".headCityV").html('全国')
+	}
+//	alert(localCityV)
+//	$(".headCityV").html(localCityV)
+$(".nav_content>a").css({'font-size':'14px'})
+</script>
